@@ -5,12 +5,10 @@ import "swiper/css";
 import { SKILLS1, SKILLS2 } from "../../constants/skills";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
-import BackHomeButton from "../components/BackHomeButton";
 
 const Page = () => {
   return (
     <div
-      style={{ backgroundImage: "url(/backgrounds/skills.png)" }}
       className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
     >
       <div className="flex flex-col gap-5 sm:gap-20 max-w-[80%] text-center items-center">
@@ -71,7 +69,6 @@ const Page = () => {
           ))}
         </Swiper>
       </div>
-      <BackHomeButton className='left-1 bottom-1 text-xs sm:text-lg py-1 px-2 sm:py-2 sm:px-4 sm:mt-10 sm:bottom-20 sm:left-10'/> 
     </div>
   );
 };

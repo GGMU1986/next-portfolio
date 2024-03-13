@@ -39,7 +39,7 @@ const Footer = () => {
           <p className='ml-1 sm:ml-2'>{phone.text}</p> 
         </div>
         <ToolTip 
-          toolTip='Click to send an email!'
+          text='Click to send an email!'
           className='text-amber-300 text-[10px] sm:text-lg mb-2'
         >
         <Link href='mailto: gt2186@gmail.com'>

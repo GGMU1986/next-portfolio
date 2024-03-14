@@ -25,39 +25,39 @@ const page = () => {
         {PICS.map((pic, i) => {
           return (
             <div 
-              className={i === current ? 'opacity-[1] easein duration-1000 mt-4 relative' : 'opacity-0'} 
+              className={i === current ? 'opacity-[1] easein duration-1000 relative' : 'opacity-0'} 
               key={i}
             > 
-              <p className='sm:invisible visible text-white z-[100] text-center text-[15px]'>{pic.title} - {pic.time}</p>
-              <FaArrowCircleLeft
-                onClick={prevPic} 
-                className='
-                  absolute bottom-[43%] sm:bottom-[50%] left-[6%] sm:-left-[15%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
-                ' 
-              />
-              <FaArrowCircleRight
+              {i == current ? (
+                <>
+                  <p className='sm:invisible visible text-white z-[100] text-center text-[15px]'>{pic.title} - {pic.time}</p>
+                  <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30">
+                    <div className="absolute inset-0 bg-gradient-to-b group-hover:from-sky-950/70 group-hover:via-sky-950/60 group-hover:to-sky-950/70"></div>
+                    <img 
+                      src={pic.path} 
+                      alt={pic.title}
+                      className='object-scale-down w-[400px] h-[200px] sm:w-[800px] sm:h-[600px]' 
+                    /> 
+                    <div className="absolute invisible sm:visible inset-0 flex translate-y-[60%] gap-6 flex-col items-center justify-center text-center transition-all duration-500 group-hover:translate-y-0">
+                      <p className="text-[10px] sm:text-3xl font-bold mb-16 sm:mb-0 text-white">{pic.title}</p>
+                      <p className="text-[10px] sm:text-2xl font-bold mb-16 sm:mb-0 text-white">{pic.time}</p>
+                      <p className="text-[10px] sm:text-xl text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-semibold">{pic.text}</p>
+                    </div> 
+                  </div>
+                </>
+              ) : <></>}
+                <FaArrowCircleLeft
+                  onClick={prevPic} 
+                  className='
+                    absolute bottom-[43%] sm:bottom-[50%] left-[6%] sm:-left-[15%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
+                  ' 
+                />
+                <FaArrowCircleRight
                   onClick={nextPic} 
                   className='
                     absolute bottom-[43%] sm:bottom-[50%] right-[7%] sm:left-[110%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
                   ' 
                 /> 
-              {i == current ? (
-                <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-                  <div className='relative'>
-                    <img 
-                      src={pic.path} 
-                      alt={pic.title}
-                      className='object-scale-down w-[400px] h-[200px] sm:w-[800px] sm:h-[600px]' 
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                  <div className="absolute invisible sm:visible inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 gap-4 text-center transition-all duration-500 group-hover:translate-y-0">
-                    <p className="text-[10px] sm:text-3xl font-bold mb-16 sm:mb-0 text-white">{pic.title}</p>
-                    <p className="text-[10px] sm:text-2xl font-bold mb-16 sm:mb-0 text-white">{pic.time}</p>
-                    <p className="text-[10px] sm:text-xl text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{pic.text}</p>
-                  </div> 
-                </div>  
-              ) : <></>}
             </div>
           )
         })}

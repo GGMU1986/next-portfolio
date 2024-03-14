@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className='bg-sky-950 scroll-smooth'>
       <body className={`${inter.className} h-screen w-screen relative`}>
         <Navbar />
         {children}

@@ -10,7 +10,6 @@ import BackHomeButton from "../components/BackHomeButton";
 const Page = () => {
   return (
     <div
-      style={{ backgroundImage: "url(/backgrounds/skills.png)" }}
       className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
     >
       <div className="flex flex-col gap-5 sm:gap-20 max-w-[80%] text-center items-center">

@@ -19,7 +19,7 @@ export const PICS = [
   },
   {
     path: '/travel/best.JPG',
-    title: 'Killarney Natoinal Park, Ireland',
+    title: 'Killarney National Park, Ireland',
     time: 'February 2019',
     text: ''
   },
@@ -92,7 +92,7 @@ export const PICS = [
   {
     path: '/travel/stone.JPG',
     title: 'Salisbury, U.K.',
-    time: 'June 2022',
+    time: 'May 2018',
     text: 'Selfie at Stonehenge'
   },
 ]

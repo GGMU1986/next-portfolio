@@ -4,7 +4,7 @@ import BackHomeButton from '../components/BackHomeButton';
 
 const aboutMe = () => {
   return (
-    <div className='w-full h-full bg-cover bg-center' style={{backgroundImage: 'url(/backgrounds/about-me.png)'}}>
+    <div className='w-full h-full bg-cover bg-center'>
       <div className='max-w-[100rem] px-10 pt-[45px] sm:max-w-[80rem] sm:px-20'>
         <p className='text-white text-lg mb-1 sm:text-5xl sm:mb-4'>About me...</p>
         <div className='text-amber-300 text-[13px] sm:text-2xl sm:font-bold'>

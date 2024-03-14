@@ -10,7 +10,9 @@ const Navbar = () => {
       <div className="flex gap-10 cursor-pointer text-white items-center">
         <Link 
           href="/George_Tsimis_Resume.pdf" 
-          target="blank">
+          className='font-semibold text-[10px] md:text-xl font-white md:hover:italic hover:text-slate-200 tracking-[2px]'
+          target="blank"
+        >
             RESUME
         </Link>
         <Link 

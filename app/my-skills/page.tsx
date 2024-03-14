@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { SKILLS1, SKILLS2 } from "../../constants/skills";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
+import { SKILLS1, SKILLS2 } from "../../constants/skills";
 
 const Page = () => {
   return (
@@ -13,7 +14,7 @@ const Page = () => {
     >
       <div className="flex flex-col gap-5 sm:gap-20 max-w-[80%] text-center items-center">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="font-semibold text-[30px] sm:text-[70px] text-black">
+          <h1 className="font-semibold text-[30px] sm:text-[70px] text-white">
             Skills{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}

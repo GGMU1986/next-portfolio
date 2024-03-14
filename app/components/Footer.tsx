@@ -25,7 +25,7 @@ const Footer = () => {
   }
   
   return (
-    <div className='fixed invisible sm:visible flex-col sm:flex-row sm:justify-between text-white bottom-0 z-[40] w-full h-[50px] sm:h-[80px] bg-transparent sm:flex sm:justify-between items-center pl-4 sm:px-15'>
+    <div className='fixed hidden sm:visible flex-col sm:flex-row sm:justify-between text-white bottom-0 z-[40] w-full h-[50px] sm:h-[80px] bg-transparent sm:flex sm:justify-between items-center pl-4 sm:px-15'>
       <div className='text-[8px] sm:text-sm'>
         &copy; {new Date().getFullYear()} Built by George Tsimis - Next.js, TypeScript, Tailwind CSS
       </div>
@@ -42,12 +42,12 @@ const Footer = () => {
           text='Click to send an email!'
           className='text-amber-300 text-[10px] sm:text-lg mb-2'
         >
-        <Link href='mailto: gt2186@gmail.com'>
-          <div className='flex items-center hover:text-amber-300 cursor-pointer'>
-            <email.icon />
-            <p className='ml-1 sm:ml-2'>{email.text}</p> 
-          </div>
-        </Link>
+          <Link href='mailto: gt2186@gmail.com'>
+            <div className='flex items-center hover:text-amber-300 cursor-pointer'>
+              <email.icon />
+              <p className='ml-1 sm:ml-2'>{email.text}</p> 
+            </div>
+          </Link>
         </ToolTip>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Portrait = () => {
   return (
-    <div className='flex sm:flex-col gap-1 mt-2 mr-8'>
+    <div className='mt-2 mr-8'>
       <img 
         src='/george_img.jpeg' 
         alt='George Pic' 

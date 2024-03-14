@@ -80,9 +80,9 @@ export const SKILLS2 = [
     height: '150'
   },
   {
-    image: '/skills/prisma.svg',
+    image: '/skills/prisma.png',
     alt: 'prisma',
-    width: '250',
+    width: '400',
     height: '200'
   },
   {

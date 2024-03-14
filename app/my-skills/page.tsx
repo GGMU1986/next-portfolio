@@ -6,6 +6,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import { SKILLS1, SKILLS2 } from "../../constants/skills";
+import Headline from "../components/Headline";
 
 const Page = () => {
   return (
@@ -14,14 +15,11 @@ const Page = () => {
     >
       <div className="flex flex-col gap-5 sm:gap-20 max-w-[80%] text-center items-center">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="font-semibold text-[30px] sm:text-[70px] text-white">
-            Skills{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              &amp;{" "}
-            </span>
-            Technologies
-          </h1>
+          <div className='flex text-[24px] sm:text-[60px] gap-4'>
+            <Headline headline='Skills'/>
+            <p className='font-bold text-white'>&amp;</p>
+            <Headline headline='Technologies'/>
+          </div>
         </div>
         <Swiper
           slidesPerView={6}

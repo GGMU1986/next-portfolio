@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import { MdEmail } from "react-icons/md";
 import { FaPhone, FaMapMarked } from "react-icons/fa";
-import ToolTip from './ToolTip';
 
 const Footer = () => {
   const phone = {
@@ -38,17 +37,12 @@ const Footer = () => {
           <phone.icon />
           <p className='ml-1 sm:ml-2'>{phone.text}</p> 
         </div>
-        <ToolTip 
-          text='Click to send an email!'
-          className='text-amber-300 text-[10px] sm:text-lg mb-2'
-        >
-          <Link href='mailto: gt2186@gmail.com'>
-            <div className='flex items-center hover:text-amber-300 cursor-pointer'>
-              <email.icon />
-              <p className='ml-1 sm:ml-2'>{email.text}</p> 
-            </div>
-          </Link>
-        </ToolTip>
+        <Link href='mailto: gt2186@gmail.com'>
+          <div className='flex items-center hover:text-amber-300 cursor-pointer'>
+            <email.icon />
+            <p className='ml-1 sm:ml-2'>{email.text}</p> 
+          </div>
+        </Link>
       </div>
     </div>
   )

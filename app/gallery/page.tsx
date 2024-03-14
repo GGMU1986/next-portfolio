@@ -1,5 +1,4 @@
 "use client"
-import Image from 'next/image';
 import React, { useState } from 'react'
 import { FaArrowCircleLeft, FaArrowCircleRight} from 'react-icons/fa';
 
@@ -18,38 +17,47 @@ const page = () => {
   };
 
   return (
-    <div className='pt-[70px] px-20'>       
-      <p className='font-semibold text-[30px] sm:text-[40px] text-white'>
-        Some photos from my travels...
-      </p>
+    <div className='flex flex-col items-center mt-[7%]'>       
+      <div className='animate-pulse font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-yellow-500 text-[24px] sm:text-[40px]'>
+        Gallery
+      </div>
       <div>
         {PICS.map((pic, i) => {
           return (
             <div 
-              className={i === current ? 'opacity-[1] easein duration-1000 flex item-center justify-center mt-16 w-[800px] h-[600px]' : 'opacity-0'} 
+              className={i === current ? 'opacity-[1] easein duration-1000 mt-4 relative' : 'opacity-0'} 
               key={i}
-            >
+            > 
+              <p className='sm:invisible visible text-white z-[100] text-center text-[15px]'>{pic.title} - {pic.time}</p>
               <FaArrowCircleLeft
                 onClick={prevPic} 
                 className='
-                  absolute top-[54%] left-[13%] text-xl text-white/70 cursor-pointer select-none z-[2]
+                  absolute bottom-[43%] sm:bottom-[50%] left-[6%] sm:-left-[15%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
                 ' 
               />
-              {i == current ? (
-                <Image 
-                  src={pic.path}
-                  alt=''
-                  width={800}
-                  height={600}
-                  objectFit='cover'
-                />
-              ) : <></>}
               <FaArrowCircleRight
-                onClick={nextPic} 
-                className='
-                  absolute top-[54%] right-[13%] text-xl text-white/70 cursor-pointer select-none z-[2]
-                ' 
-              />
+                  onClick={nextPic} 
+                  className='
+                    absolute bottom-[43%] sm:bottom-[50%] right-[7%] sm:left-[110%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
+                  ' 
+                /> 
+              {i == current ? (
+                <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                  <div className='relative'>
+                    <img 
+                      src={pic.path} 
+                      alt={pic.title}
+                      className='object-scale-down w-[400px] h-[200px] sm:w-[800px] sm:h-[600px]' 
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+                  <div className="absolute invisible sm:visible inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 gap-4 text-center transition-all duration-500 group-hover:translate-y-0">
+                    <p className="text-[10px] sm:text-3xl font-bold mb-16 sm:mb-0 text-white">{pic.title}</p>
+                    <p className="text-[10px] sm:text-2xl font-bold mb-16 sm:mb-0 text-white">{pic.time}</p>
+                    <p className="text-[10px] sm:text-xl text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">{pic.text}</p>
+                  </div> 
+                </div>  
+              ) : <></>}
             </div>
           )
         })}
@@ -58,4 +66,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page;

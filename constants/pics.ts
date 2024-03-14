@@ -76,5 +76,23 @@ export const PICS = [
     title: 'Just outside of Ioannina, Greece',
     time: 'June 2022',
     text: ''
-  }
+  },
+  {
+    path: '/travel/dinner.jpg',
+    title: 'Lefkada, Greece',
+    time: 'July 2021',
+    text: 'Dinner with the wife'
+  },
+  {
+    path: '/travel/USVI.jpg',
+    title: 'St. Thomas, U.S. Virgin Islands',
+    time: 'November 2023',
+    text: ''
+  },
+  {
+    path: '/travel/stone.JPG',
+    title: 'Salisbury, U.K.',
+    time: 'June 2022',
+    text: 'Selfie at Stonehenge'
+  },
 ]

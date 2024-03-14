@@ -1,26 +1,18 @@
 "use client"
 import React, { useState } from 'react'
+
 import { FaArrowCircleLeft, FaArrowCircleRight} from 'react-icons/fa';
 
 import { PICS } from '../../constants/pics';
+import Headline from '../components/Headline';
 
 const page = () => {
   const [current, setCurrent] = useState(0);
   const length = PICS.length;
 
-  const nextPic = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1)
-  };
-  
-  const prevPic = () => {
-    setCurrent(current === 0 ? length - 1  : current - 1)
-  };
-
   return (
-    <div className='flex flex-col items-center mt-[7%]'>       
-      <div className='animate-pulse font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-yellow-500 text-[24px] sm:text-[40px]'>
-        Gallery
-      </div>
+    <div className='flex flex-col items-center'>  
+      <Headline headline='Gallery' className='text-[24px] sm:text-[50px] mt-[6%]' />
       <div>
         {PICS.map((pic, i) => {
           return (
@@ -28,7 +20,7 @@ const page = () => {
               className={i === current ? 'opacity-[1] easein duration-1000 relative' : 'opacity-0'} 
               key={i}
             > 
-              {i == current ? (
+              {i === current ? (
                 <>
                   <p className='sm:invisible visible text-white z-[100] text-center text-[15px]'>{pic.title} - {pic.time}</p>
                   <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30">
@@ -38,7 +30,7 @@ const page = () => {
                       alt={pic.title}
                       className='object-scale-down w-[400px] h-[200px] sm:w-[800px] sm:h-[600px]' 
                     /> 
-                    <div className="absolute invisible sm:visible inset-0 flex translate-y-[60%] gap-6 flex-col items-center justify-center text-center transition-all duration-500 group-hover:translate-y-0">
+                    <div className="absolute invisible sm:visible inset-0 flex translate-y-[70%] gap-6 flex-col items-center justify-center text-center transition-all duration-500 group-hover:translate-y-0">
                       <p className="text-[10px] sm:text-3xl font-bold mb-16 sm:mb-0 text-white">{pic.title}</p>
                       <p className="text-[10px] sm:text-2xl font-bold mb-16 sm:mb-0 text-white">{pic.time}</p>
                       <p className="text-[10px] sm:text-xl text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-semibold">{pic.text}</p>
@@ -47,13 +39,13 @@ const page = () => {
                 </>
               ) : <></>}
                 <FaArrowCircleLeft
-                  onClick={prevPic} 
+                  onClick={() => setCurrent(current === 0 ? length - 1  : current - 1)} 
                   className='
                     absolute bottom-[43%] sm:bottom-[50%] left-[6%] sm:-left-[15%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
                   ' 
                 />
                 <FaArrowCircleRight
-                  onClick={nextPic} 
+                  onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)} 
                   className='
                     absolute bottom-[43%] sm:bottom-[50%] right-[7%] sm:left-[110%] text-[24px] sm:text-[40px] text-white/70 cursor-pointer select-none z-[2]
                   ' 

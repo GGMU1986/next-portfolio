@@ -1,4 +1,7 @@
+"use client"
 import React from 'react'
+
+import { motion } from 'framer-motion';
 
 interface HeadlineProps {
   headline: string;
@@ -7,9 +10,14 @@ interface HeadlineProps {
 
 const Headline: React.FC<HeadlineProps> = ({ headline, className }) => {
   return (
-    <div className={`animate-pulse font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-cyan-500 ${className}`}>
+    <motion.div 
+      className={`animate-pulse font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-cyan-500 ${className}`}
+      initial={{ x: -600 }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', stiffness: '120' }}
+    >
       {headline}
-    </div>
+    </motion.div>
   )
 }
 

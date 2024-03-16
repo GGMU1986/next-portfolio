@@ -78,10 +78,10 @@ export const PICS = [
     text: ''
   },
   {
-    path: '/travel/dinner.jpg',
-    title: 'Lefkada, Greece',
-    time: 'July 2021',
-    text: 'Dinner with the wife'
+    path: '/travel/dublin.jpg',
+    title: 'Dublin, Ireland',
+    time: 'Feb 2019',
+    text: ''
   },
   {
     path: '/travel/USVI.jpg',

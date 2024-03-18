@@ -28,7 +28,7 @@ const Footer = () => {
   
   return (
     <motion.div 
-      className='fixed hidden sm:visible flex-col sm:flex-row sm:justify-between text-white bottom-0 z-[40] w-full h-[50px] sm:h-[80px] bg-transparent sm:flex sm:justify-between items-center pl-4 sm:px-15'
+      className='fixed hidden sm:visible flex-col sm:flex-row sm:justify-between text-white bottom-0 z-[9] w-full h-[50px] sm:h-[80px] bg-transparent sm:flex sm:justify-between items-center pl-4 sm:px-15'
       initial={{ y: 50 }}
       animate={{ y: 10 }}
     >

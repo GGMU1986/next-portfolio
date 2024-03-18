@@ -8,7 +8,7 @@ import LinkText from './LinkText';
 const Navbar = () => {
   return (
     <motion.div 
-      className="fixed top-0 z-[40] w-full h-[50px] sm:h-[100px] bg-transparent flex justify-between justify-center gap-2 items-center px-10 sm:px-20"
+      className="fixed top-0 z-[9] w-full h-[50px] sm:h-[100px] bg-transparent flex justify-between justify-center gap-2 items-center px-10 sm:px-20"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >

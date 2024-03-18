@@ -7,6 +7,7 @@ import "swiper/css";
 
 import { SKILLS1, SKILLS2 } from "../../constants/skills";
 import Headline from "../components/Headline";
+import { Skill } from "../types";
 
 const Page = () => {
   return (
@@ -22,48 +23,37 @@ const Page = () => {
           </div>
         </div>
         <Swiper
-          slidesPerView={6}
+          slidesPerView={8}
           loop={true}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
           }}
-          speed={6000}
+          speed={3000}
           modules={[Autoplay]}
           className="max-w-[80%]"
         >
-          {SKILLS1.map((skill: any, index: number) => (
+          {SKILLS1.map((skill: Skill, index: number) => (
             <SwiperSlide key={index}>
-              <Image
-                src={skill.image}
-                alt={skill.alt}
-                width={skill.width}
-                height={skill.height}
-              />
+              <img src={skill.image} alt={skill.alt} />
             </SwiperSlide>
           ))}
         </Swiper>
         <Swiper
-          slidesPerView={6}
+          slidesPerView={8}
           loop={true}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
             reverseDirection: true
           }}
-          speed={6000}
+          speed={3000}
           modules={[Autoplay]}
           className="max-w-[80%] flex items-center justify-center text-center"
         >
-          {SKILLS2.map((skill: any, index: number) => (
+          {SKILLS2.map((skill: Skill, index: number) => (
             <SwiperSlide key={index}>
-              <Image
-                src={skill.image}
-                alt={skill.alt}
-                width={skill.width}
-                height={skill.height}
-                className={skill.className}
-              />
+              <img src={skill.image} alt={skill.alt} />
             </SwiperSlide>
           ))}
         </Swiper>

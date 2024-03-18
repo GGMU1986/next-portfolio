@@ -22,7 +22,7 @@ const SpanText: React.FC<SpanTextProps> = ({ children }) => {
       ]
     })
     setIsPlaying(true);
-  } 
+  }
 
   return (
     <motion.span

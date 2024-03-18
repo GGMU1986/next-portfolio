@@ -11,7 +11,7 @@ const TitleAndIntro = () => {
       />
       <Headline headline='Software Engineer' className='md:text-[50px]' />
       <div className='text-white sm:max-w-[40rem] text-sm sm:text-xl sm:pt-5 font-semibold'>
-        I have two years experience working as a Full Stack Software Engineer on a team developing web applications with JavaScript,
+        I have over two years of experience working as a Full Stack Software Engineer on a team developing web applications with JavaScript,
         TypeScript, Node, React, Next, Java, Spring Boot, Tailwind, Mantine, AWS, Jest, React Testing Library, PostgreSQL,
         Ruby on Rails, Redux, and GraphQL.<br/><br/>
         Coding is incredibly rewarding and fun! 

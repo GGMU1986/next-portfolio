@@ -1,15 +1,17 @@
 import React from 'react'
 import Headline from './Headline';
 import SentenceAnimation from './sentenceAnimation';
+import TypeEffect from './TypeEffect';
 
 const TitleAndIntro = () => {
   return (
-    <div className='flex flex-col text-[24px] md:text-[40px] z-[10] sm:max-w-[750px]'>
+    <div className='flex flex-col text-[24px] md:text-[40px] z-[10] sm:max-w-[750px] ml-2'>
       <SentenceAnimation 
         phrase="George&nbsp;Tsimis"
         className='text-white font-semibold cursor-pointer tracking-wider'
       />
-      <Headline headline='Software Engineer' className='md:text-[50px]' />
+      <TypeEffect />
+      {/* <Headline headline='Software Engineer' className='md:text-[50px]' /> */}
       <div className='text-white sm:max-w-[40rem] text-sm sm:text-xl sm:pt-5 font-semibold'>
         I have over two years of experience working as a Full Stack Software Engineer on a team developing web applications with JavaScript,
         TypeScript, Node, React, Next, Java, Spring Boot, Tailwind, Mantine, AWS, Jest, React Testing Library, PostgreSQL,

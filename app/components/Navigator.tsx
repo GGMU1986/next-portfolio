@@ -17,11 +17,13 @@ const Navigator = () => {
           <Link key={i} href={nav.path}>
             <motion.div
               whileHover={{ scale: 1.4 }}
+              className={`flex flex-col items-center ${path === nav.path ? 'text-amber-300' : ''}`}
             >
               <nav.icon 
                 href={nav.path}
-                className={`text-2xl ${path === nav.path ? 'text-amber-300' : ''}`}
+                className={`text-2xl`}
               />
+              <p className='text-xs mt-1'>{nav.text}</p>
             </motion.div>
           </Link>
         )

@@ -26,13 +26,14 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({ setNext, picsArray }) =
               {pic.id === current ? (
                 <>
                   <div className='flex flex-col justify-center items-center'>
-                    <div className='text-white text-2xl font-semibold text-center'>{pic.id > 7 ? 'Aspen Suite' : 'Borrower Portal'}</div>
-                    <img 
+                    <div className='text-white text-2xl font-semibold text-center'>{pic.id > 7 ? 'Aspen Suite - Internal app' : 'Borrower Portal - User-facing app'}</div>
+                    <img
+                      onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)} 
                       src={pic.path} 
                       alt={pic.alt}
-                      className='object-scale-down w-[400px] h-[200px] sm:w-[900px] sm:h-[600px] my-4' 
+                      className='object-scale-down w-[400px] h-[200px] sm:w-[900px] sm:h-[600px] my-4 cursor-pointer relative' 
                     />
-                    <div className='flex justify-center items-center text-white mb-4'>
+                    <div className='flex justify-center items-center text-center text-lg text-white'>
                       {pic.description}
                     </div>     
                   </div>
@@ -41,17 +42,16 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({ setNext, picsArray }) =
             </div>
           )
         })}
-        <div className='flex justify-center items-center cursor-pointer'>
-          <>
-            <IoIosArrowDropleftCircle 
-              className='text-white text-[30px]'
-              onClick={() => setCurrent(current === 0 ? length - 1  : current - 1)} 
-            />
-            <IoIosArrowDroprightCircle 
-              className='text-white text-[30px] ml-8'
-              onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)} 
-            /> 
-          </>
+        <div className='flex justify-center items-center cursor-pointer text-white gap-5 mt-8'>
+          <IoIosArrowDropleftCircle 
+            className='text-[30px]'
+            onClick={() => setCurrent(current === 0 ? length - 1  : current - 1)} 
+          />
+          {Array.from({length}, (_, i) => i + 1).map(el => <div className='cursor-pointer' onClick={() => setCurrent(el - 1)}>{el}</div>)}
+          <IoIosArrowDroprightCircle 
+            className='text-[30px]'
+            onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)} 
+          />
         </div>
       </div>
       <div className='flex justify-end'>

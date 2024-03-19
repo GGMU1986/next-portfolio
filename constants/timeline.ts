@@ -4,54 +4,42 @@ export const TIMELINEFRONT = [
     title: 'Associate Software Engineer',
     place: 'Aspen Capital - New York, NY',
     date: 'Aug 2022 - Present',
-    info: '',
-    className:
-      'absolute top-[4%] sm:top-[5%] left-[10%] sm:left-[60%] cursor-pointer',
+    className: 'top-[4%] sm:top-[5%]',
   },
   {
     type: 'dev',
     title: 'Software Engineer I',
     place: 'LynxDx, Inc - Ann Arbor, MI',
     date: 'Feb 2022 - July 2022',
-    info: '',
-    className:
-      'top-[12%] absolute sm:top-[13%] left-[10%] sm:left-[22%] z-[10] cursor-pointer',
+    className: 'top-[14%] sm:top-[16%]',
   },
   {
     type: 'school',
     title: 'Coding Bootcamp',
     place: 'App Academy - New York, NY',
     date: 'Nov 2021',
-    info: '',
-    className:
-      'top-[20%] sm:top-[21%] absolute left-[10%] sm:left-[60%] z-[10] cursor-pointer',
+    className: 'top-[24%] sm:top-[26%]',
   },
   {
     type: 'school',
     title: 'MA Mathematics',
     place: 'Queens College - New York, NY',
     date: 'Sept 2021',
-    info: '',
-    className:
-      'top-[28%] sm:top-[29%] absolute left-[10%] sm:left-[22%] z-[10] cursor-pointer',
+    className: 'top-[34%] sm:top-[36%]',
   },
   {
     type: 'work',
     title: 'Financial Data Analyst',
     place: 'Moody&apos;s Corporation - New York, NY',
     date: 'July 2018 - July 2021',
-    info: '',
-    className:
-      'top-[36%] sm:top-[37%] absolute left-[10%] sm:left-[60%] z-[10] cursor-pointer',
+    className: 'top-[44%] sm:top-[46%]',
   },
   {
     type: 'work',
     title: 'Assurance Intern',
     place: 'PriceWaterhouseCoopers - New York, NY',
     date: 'Jan 2018 - Apr 2018',
-    info: '',
-    className:
-      'top-[44%] sm:top-[45%] absolute left-[10%] sm:left-[22%] z-[10] cursor-pointer',
+    className: 'top-[54%] sm:top-[56%]',
   },
   {
     type: 'work',
@@ -59,17 +47,14 @@ export const TIMELINEFRONT = [
     place: 'CUNY - New York, NY',
     date: 'Aug 2016 - Dec 2017',
     info: 'Classes taught: Pre-calculus, Calculus',
-    className:
-      'top-[52%] sm:top-[53%] absolute left-[10%] sm:left-[60%] z-[10] cursor-pointer',
+    className: 'top-[64%] sm:top-[66%]',
   },
   {
     type: 'school',
     title: 'BA Mathematics',
     place: 'Queens College - New York, NY',
     date: 'June 2016',
-    info: '',
-    className:
-      'top-[60%] sm:top-[61%] relative left-[10%] sm:left-[22%] z-[10] cursor-pointer',
+    className: 'top-[74%] sm:top-[76%] left-[10%]',
   },
 ];
 

@@ -219,7 +219,7 @@ export const TIMELINEMODAL = [
     place: 'New York, N.Y.',
     date: 'September 2021',
     classesTaken:
-      'Topology, Abstract Algebra, Theory of the Integral, Complex Analysis, Real Analysis, Numerical Analysis I & II, Number Theory',
+      'Topology, Abstract Algebra, Theory of the Integral, Complex Analysis, Real Analysis I & II, Numerical Analysis I & II, Number Theory',
   },
   {
     id: 4,

@@ -64,7 +64,7 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
               ) : (
                 <></>
               )}
-              <div className='absolute left-2 bottom-2 text-white'>
+              <div className='absolute -left-[1%] -bottom-[6%] text-white'>
                 {pic.id + 1}/{picsArray.length}
               </div>
             </div>

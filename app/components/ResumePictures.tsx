@@ -1,65 +1,82 @@
 import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from 'react-icons/io';
+import { IoIosArrowDropleftCircle } from 'react-icons/io';
 import { ResumePicture } from '../types';
 
 interface ResumePicturesProps {
-  setNext: (state:boolean) => void
+  setNext: (state: boolean) => void;
   picsArray: ResumePicture[];
 }
 
-const ResumePictures: React.FC<ResumePicturesProps> = ({ setNext, picsArray }) => {
+const ResumePictures: React.FC<ResumePicturesProps> = ({
+  setNext,
+  picsArray,
+}) => {
   const [current, setCurrent] = useState(0);
   const length = picsArray.length;
-  
+
   return (
     <div>
       <div>
-        {picsArray.map(pic => {
+        {picsArray.map((pic) => {
           return (
-            <div 
-              className={pic.id === current ? 'opacity-[1] easein duration-1000 relative' : 'opacity-0'} 
+            <div
+              className={
+                pic.id === current
+                  ? 'opacity-[1] easein duration-1000 relative'
+                  : 'opacity-0'
+              }
               key={pic.id}
-            > 
+            >
               {pic.id === current ? (
-                <>
-                  <div className='flex flex-col justify-center items-center'>
-                    <div className='text-white text-2xl font-semibold text-center'>{pic.id > 7 ? 'Aspen Suite' : 'Borrower Portal'}</div>
-                    <img 
-                      src={pic.path} 
-                      alt={pic.alt}
-                      className='object-scale-down w-[400px] h-[200px] sm:w-[900px] sm:h-[600px] my-4' 
-                    />
-                    <div className='flex justify-center items-center text-white mb-4'>
-                      {pic.description}
-                    </div>     
+                <div className='flex flex-col justify-center items-center relative'>
+                  <div className='text-white text-2xl font-semibold text-center'>
+                    {pic.id > 9
+                      ? `Aspen Suite - ${pic.tab}`
+                      : `Borrower Portal - ${pic.tab}`}
                   </div>
-                </>
-              ) : <></>}
+                  <img
+                    onClick={() =>
+                      setCurrent(current === length - 1 ? 0 : current + 1)
+                    }
+                    src={pic.path}
+                    alt={pic.alt}
+                    className='object-scale-down w-[400px] h-[200px] sm:w-[900px] sm:h-[600px] my-4 cursor-pointer relative'
+                  />
+                  <div className='flex justify-center items-center text-center text-lg text-white px-20'>
+                    {pic.description}
+                  </div>
+                  <IoIosArrowDropleftCircle
+                    className='text-[30px] text-white absolute left-[2%] cursor-pointer'
+                    onClick={() =>
+                      setCurrent(current === 0 ? length - 1 : current - 1)
+                    }
+                  />
+                  <IoIosArrowDroprightCircle
+                    className='text-[30px] text-white absolute right-[2%] cursor-pointer'
+                    onClick={() =>
+                      setCurrent(current === length - 1 ? 0 : current + 1)
+                    }
+                  />
+                </div>
+              ) : (
+                <></>
+              )}
+              <div className='absolute left-2 bottom-2 text-white'>
+                {pic.id + 1}/{picsArray.length}
+              </div>
             </div>
-          )
+          );
         })}
-        <div className='flex justify-center items-center cursor-pointer'>
-          <>
-            <IoIosArrowDropleftCircle 
-              className='text-white text-[30px]'
-              onClick={() => setCurrent(current === 0 ? length - 1  : current - 1)} 
-            />
-            <IoIosArrowDroprightCircle 
-              className='text-white text-[30px] ml-8'
-              onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)} 
-            /> 
-          </>
-        </div>
       </div>
       <div className='flex justify-end'>
-        <motion.button 
+        <motion.button
           whileHover={{
             scale: 1.1,
             textShadow: '0px 0px 8px rgb(255, 255, 255)',
-            boxShadow: '0px 0px 8px rgb(255, 255, 255)'
+            boxShadow: '0px 0px 8px rgb(255, 255, 255)',
           }}
           className='bg-black text-white border rounded text-center w-fit h-6 p-4 flex items-center'
           onClick={() => setNext(false)}
@@ -68,7 +85,7 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({ setNext, picsArray }) =
         </motion.button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ResumePictures;

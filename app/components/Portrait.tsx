@@ -1,5 +1,5 @@
-"use client"
-import React, { useState } from 'react'
+'use client';
+import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const Portrait = () => {
     <div>
       {SELF_IMGS.map((self, i) => {
         return (
-          <motion.div 
+          <motion.div
             key={i}
             className='mt-2 mr-8'
             initial={{ opacity: 0 }}
@@ -21,18 +21,22 @@ const Portrait = () => {
             transition={{ duration: 5 }}
           >
             {i === current ? (
-              <img 
-                src={self.src} 
-                alt={self.alt} 
+              <img
+                src={self.src}
+                alt={self.alt}
                 className='rounded-xl shadow-glow w-[70px] h-[70px] sm:w-[400px] sm:h-[400px] mr-10 cursor-pointer object-cover'
-                onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)} 
+                onClick={() =>
+                  setCurrent(current === length - 1 ? 0 : current + 1)
+                }
               />
-            ) : <></>}
+            ) : (
+              <></>
+            )}
           </motion.div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
 export default Portrait;

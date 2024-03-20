@@ -1,8 +1,8 @@
 export type ImageArray = {
-  path: string,
-  title: string,
-  time: string,
-  text: string | undefined,
+  path: string;
+  title: string;
+  time: string;
+  text: string | undefined;
 };
 
 export type ModalData = {
@@ -21,10 +21,11 @@ export type ResumePicture = {
   id: number;
   path: string;
   alt: string;
+  tab: string;
   description: string;
-}
+};
 
 export type Skill = {
   image: string;
   alt: string;
-}
+};

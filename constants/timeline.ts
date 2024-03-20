@@ -4,42 +4,48 @@ export const TIMELINEFRONT = [
     title: 'Associate Software Engineer',
     place: 'Aspen Capital - New York, NY',
     date: 'Aug 2022 - Present',
-    className: 'top-[4%] sm:top-[5%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[4%] sm:top-[5%] sm:left-[60%]',
   },
   {
     type: 'dev',
     title: 'Software Engineer I',
     place: 'LynxDx, Inc - Ann Arbor, MI',
     date: 'Feb 2022 - July 2022',
-    className: 'top-[14%] sm:top-[16%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[14%] sm:top-[16%] sm:left-[22%]',
   },
   {
     type: 'school',
     title: 'Coding Bootcamp',
     place: 'App Academy - New York, NY',
     date: 'Nov 2021',
-    className: 'top-[24%] sm:top-[26%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[24%] sm:top-[26%] sm:left-[60%]',
   },
   {
     type: 'school',
     title: 'MA Mathematics',
     place: 'Queens College - New York, NY',
     date: 'Sept 2021',
-    className: 'top-[34%] sm:top-[36%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[34%] sm:top-[36%] sm:left-[22%]',
   },
   {
     type: 'work',
     title: 'Financial Data Analyst',
     place: 'Moody&apos;s Corporation - New York, NY',
     date: 'July 2018 - July 2021',
-    className: 'top-[44%] sm:top-[46%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[44%] sm:top-[46%] sm:left-[60%]',
   },
   {
     type: 'work',
     title: 'Assurance Intern',
     place: 'PriceWaterhouseCoopers - New York, NY',
     date: 'Jan 2018 - Apr 2018',
-    className: 'top-[54%] sm:top-[56%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[54%] sm:top-[56%] sm:left-[22%]',
   },
   {
     type: 'work',
@@ -47,14 +53,16 @@ export const TIMELINEFRONT = [
     place: 'CUNY - New York, NY',
     date: 'Aug 2016 - Dec 2017',
     info: 'Classes taught: Pre-calculus, Calculus',
-    className: 'top-[64%] sm:top-[66%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[64%] sm:top-[66%] sm:left-[60%]',
   },
   {
     type: 'school',
     title: 'BA Mathematics',
     place: 'Queens College - New York, NY',
     date: 'June 2016',
-    className: 'top-[74%] sm:top-[76%] left-[10%]',
+    className:
+      'absolute cursor-pointer left-[10%] top-[74%] sm:top-[76%] left-[10%] sm:left-[22%]',
   },
 ];
 
@@ -67,66 +75,116 @@ export const TIMELINEMODAL = [
     place: 'New York, N.Y.',
     date: 'August 2022 - Present',
     bullets: [
-      'Significantly enhanced automated phone payment system, including testing and error logging, to allow for saving bank accounts, and setting up/updating autopay, so borrowers never miss a payment. Increased business monthly revenue by $1-2M',
-      'Migrated process for updating databases with payment information from Chase to AWS. Replaced process of stored long SQL procedures, resulting in better logging, error handling, and process efficiency. Added email/slack notifications for borrowers/internal team',
-      "Collaborated with teams across the business to understand needs, provide value, and create realistic plans to complete goals. Participated in software design/architecture discussions. Reviewed team members' pull requests and provided feedback to improve code quality",
-      'Added a backend feature that sent two email reminders to borrowers that manually linked bank accounts in user-facing app, through micro-deposits, to complete the process of linking their bank account',
+      'At Aspen Capital, I assisted to build, and currently help maintain, and write tests for a user-facing app, an internal app, and the automated phone system. Additonally, I make improvements, and take part in a rotational on call for our microservices that maintain the nightly statement process, which assesses each loan for late fees or the creation of the monthly statements',
+      'The user-facing app, or Borrower Portal (BP), for Gregory Funding, which is the mortgage servicing arm of Aspen Capital, allows borrowers to make payments, set up autopay, upload/download documents, view loan information/payment history, and update personal information, all while receiving email notifications. As of March 2024, the BP has 19,000+ active users, and averages 11,000+ payments for $20M+ in payment revenue per month',
+      'The internal app is the Aspen Suite (AS), or the Admin Portal. Business analysts, product managers, developers, and other internal stakeholders can use the app to view relevant information about borrowers and loans. The app is the main resource for the Gregory Funding Call Center agents to assist, and perform actions on behalf of, the borrowers',
+      'Many borrowers prefer to make payments over the phone, not through the BP, resulting in call wait times of over an hour. I helped, design, develop, and deploy an automated phone system using the Twilio API, where borrowers can use the Interactive Voice Response (IVR) system to make payments, save bank accounts for future use, and setup/update/delete autopay. This significantly reduced pressure on the call center, reducing call wait times by one hour. As of March 2024, Twilio payments average about 3,000+ per month resulting in $5M+ in revenue',
+      'I was the lead on the project to migrate the process for updating our on-prem & cloud databases with payment information, from Chase, to AWS. I replaced the previous process which consisted of stored long SQL procedures. I made use of S3 buckets, Lambdas, and SQS in AWS for the new process. Resulting in better logging, error handling, and process efficiency',
+      'I collaborate daily with stakeholders/teams in various parts of the business to understand needs, and create realistic plans to complete goals. I also participate in software design/architecture discussions, review pull requests for my peers and provide feedback to improve code quality',
     ],
     pics: [
       {
         id: 0,
-        path: '/acPics/dashboard.png',
+        path: '/acPics/bp/dashboard.png',
         alt: 'Dashboard',
+        tab: 'Dashboard',
         description:
-          'The Borrower Portal Dashboard tab, where borrowers can view the relevant information pertaining to their loan',
+          'Borrowers can view the relevant information pertaining to their loan',
       },
       {
         id: 1,
-        path: '/acPics/account-profile.png',
+        path: '/acPics/bp/account-profile.png',
         alt: 'Account Profile',
+        tab: 'Account Profile',
         description:
-          'The Account Profile tab, where borrowers can confirm their information is correct and make updates. Before navigating away, the borrower will be asked if they want keep unsaved changes',
+          'Borrowers can confirm their information is correct, make updates, and select preferences. Before navigating away, the borrower will be asked if they want keep unsaved changes',
       },
       {
         id: 2,
-        path: '/acPics/one-time-payment.png',
-        alt: 'One time payment',
+        path: '/acPics/bp/statements.png',
+        alt: 'Statements & Documents',
+        tab: 'Statements & Documents',
         description:
-          'The Payments tab, where borrowers can schedule one-time payments, assuming they have linked a bank account, manually or through plaid, on the portal',
+          'One place for borrowers to upload/download important statements/documents related to their loan',
       },
       {
         id: 3,
-        path: '/acPics/payment-confirmation-modal.png',
-        alt: 'Payment confirmation modal',
+        path: '/acPics/bp/one-time-payment.png',
+        alt: 'One time payment',
+        tab: 'Payments',
         description:
-          'The Payment Confirmation Modal, where borrowers can confirm all the information is correct before initiating a payment',
+          'Borrowers can schedule one-time payments, if they have linked a bank account first',
       },
       {
         id: 4,
-        path: '/acPics/payment-history.png',
-        alt: 'Payment history',
+        path: '/acPics/bp/payment-confirmation-modal.png',
+        alt: 'Payment confirmation modal',
+        tab: 'Payment Confirmation Modal',
         description:
-          'The Payment History tab, where borrowers can see all their payments in one place, with relevant information for each payment, and there is a sorting feature as well',
+          'Borrowers can confirm all the information is correct before initiating a payment',
       },
       {
         id: 5,
-        path: '/acPics/add-bank-account.png',
-        alt: 'Add bank account',
+        path: '/acPics/bp/payment-history.png',
+        alt: 'Payment history',
+        tab: 'Payment History',
         description:
-          'Adding a bank account to the portal, borrowers can link accounts manually through micro-deposits, this option takes a few business days. Or they can go through the plaid flow to link their account faster',
+          'Borrowers can see all their payments in one place, with relevant information for each payment, and there is a sorting feature as well',
       },
       {
         id: 6,
-        path: '/acPics/plaid-gregory.png',
-        alt: 'Plaid Gregory',
-        description: 'The Plaid flow to link a bank account',
+        path: '/acPics/bp/payment-history-item.png',
+        alt: 'Payment history item',
+        tab: 'Payment Information Modal',
+        description:
+          'Borrowers can click into each payment to get more information',
       },
       {
         id: 7,
-        path: '/acPics/autopay-modal.png',
-        alt: 'Autopay Modal',
+        path: '/acPics/bp/add-bank-account.png',
+        alt: 'Add bank account',
+        tab: 'Adding a Bank Account',
         description:
-          'The Autopay form modal, where borrowers can set up autopay for any day of the month. Only certain loans are eligible for Autopay, only these loans will have access to the form. Also, if the last day of the month ends before their chosen day to pay, the payment will be initiated on the last day of the month',
+          'Borrowers can link accounts manually through micro-deposits, which takes a few business days. Or they can go through the Plaid flow to link their accounts faster',
+      },
+      {
+        id: 8,
+        path: '/acPics/bp/plaid-gregory.png',
+        alt: 'Plaid Gregory',
+        tab: 'Plaid Flow',
+        description: 'The Plaid flow to link a bank account',
+      },
+      {
+        id: 9,
+        path: '/acPics/bp/autopay-modal.png',
+        alt: 'Autopay Modal BP',
+        tab: 'Autopay Modal',
+        description:
+          'Borrowers can set up/update autopay for any day of the month, and delete autopay. Certain loans are eligible for autopay, only these loans will have access to the form. Also, if the last day of the month ends before their chosen day to pay, the payment will be initiated on the last day of the month',
+      },
+      {
+        id: 10,
+        path: '/acPics/as/as-home.png',
+        alt: 'Aspen Suite Home',
+        tab: 'Aspen Suite Home',
+        description:
+          'This is the Aspen Suite landing page. The search can find loans by entering in loan ids, loan numbers, property addresses, or borrower last names',
+      },
+      {
+        id: 11,
+        path: '/acPics/as/autopay-buttons.png',
+        alt: 'Autopay Set Up',
+        tab: 'Autopay Set Up',
+        description:
+          'I was the lead engineer for implementing Autopay set up/update/deletion in Aspen Suite for various eligible loan types, including writing the tests. This required logic on the Frontend & Backend (Java, Spring Boot)',
+      },
+      {
+        id: 12,
+        path: '/acPics/as/autopay-modal.png',
+        alt: 'Autopay Modal AS',
+        tab: 'Autopay Modal',
+        description:
+          'This is the Autopay modal created with Mantine. The modal inputs change as the status of the loan changes',
       },
     ],
   },

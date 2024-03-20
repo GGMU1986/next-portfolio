@@ -64,7 +64,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`z-[20] w-[70rem] h-fit p-8 rounded-lg ${
+      className={`z-[20] w-[70rem] p-8 rounded-lg ${
         data.type === 'school'
           ? 'bg-blue-500'
           : data.type === 'work'
@@ -94,7 +94,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
         />
       ) : (
         <>
-          <div className='flex flex-col text-white py-2 mt-6 gap-2'>
+          <div className='flex flex-col text-white py-2 mt-4 gap-2'>
             <div className='flex justify-between items-center text-2xl font-semibold'>
               <p>{data.company}</p>
               <p>{data.place}</p>
@@ -104,12 +104,12 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
               <p>{data.date}</p>
             </div>
           </div>
-          <div className='px-10 flex flex-col text-white mt-8'>
+          <div className='px-8 flex flex-col text-white mt-4'>
             {data.bullets ? (
               <ul>
                 {data.bullets.map((bullet: string, i: number): ReactElement => {
                   return (
-                    <li key={i} className='mt-4 text-lg'>
+                    <li key={i} className='mt-4 text-md'>
                       {bullet}
                     </li>
                   );

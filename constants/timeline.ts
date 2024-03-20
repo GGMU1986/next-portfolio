@@ -78,7 +78,7 @@ export const TIMELINEMODAL = [
       'At Aspen Capital, I assisted to build, and currently help maintain, and write tests for a user-facing app, an internal app, and the automated phone system. Additonally, I make improvements, and take part in a rotational on call for our microservices that maintain the nightly statement process, which assesses each loan for late fees or the creation of the monthly statements',
       'The user-facing app, or Borrower Portal (BP), for Gregory Funding, which is the mortgage servicing arm of Aspen Capital, allows borrowers to make payments, set up autopay, upload/download documents, view loan information/payment history, and update personal information, all while receiving email notifications. As of March 2024, the BP has 19,000+ active users, and averages 11,000+ payments for $20M+ in payment revenue per month',
       'The internal app is the Aspen Suite (AS), or the Admin Portal. Business analysts, product managers, developers, and other internal stakeholders can use the app to view relevant information about borrowers and loans. The app is the main resource for the Gregory Funding Call Center agents to assist, and perform actions on behalf of, the borrowers',
-      'Many borrowers prefer to make payments over the phone, not through the BP, resulting in call wait times of over an hour. I helped, design, develop, and deploy an automated phone system using the Twilio API, where borrowers can use the Interactive Voice Response (IVR) system to make payments, save bank accounts for future use, and setup/update/delete autopay. This significantly reduced pressure on the call center, reducing call wait times by one hour. As of March 2024, Twilio payments average about 3,000+ per month resulting in $5M+ in revenue',
+      'Many borrowers prefer to make payments over the phone, not through the BP, resulting in call wait times of over an hour. I helped design, develop, and deploy an automated phone system using the Twilio API, where borrowers can use the Interactive Voice Response (IVR) system to make payments, save bank accounts for future use, and setup/update/delete autopay. This greatly decreased pressure on the call center, reducing call wait times by one hour. As of March 2024, Twilio payments average about 3,000+ per month resulting in $5M+ in revenue',
       'I was the lead on the project to migrate the process for updating our on-prem & cloud databases with payment information, from Chase, to AWS. I replaced the previous process which consisted of stored long SQL procedures. I made use of S3 buckets, Lambdas, and SQS in AWS for the new process. Resulting in better logging, error handling, and process efficiency',
       'I collaborate daily with stakeholders/teams in various parts of the business to understand needs, and create realistic plans to complete goals. I also participate in software design/architecture discussions, review pull requests for my peers and provide feedback to improve code quality',
     ],
@@ -93,6 +93,22 @@ export const TIMELINEMODAL = [
       },
       {
         id: 1,
+        path: '/acPics/bp/campaign-modal-paperless.png',
+        alt: 'paperless-campaign',
+        tab: 'Paperless Campaign Modal',
+        description:
+          'If a borrower had not enabled paperless upon registration then a modal would appear for the first few times after they logged in promtping them to opt for paperless. Paperless conversion went from 20% to 49%',
+      },
+      {
+        id: 2,
+        path: '/acPics/bp/campaign-modal-autopay.png',
+        alt: 'Campaign Autopay',
+        tab: 'Autopay Campaign Modal',
+        description:
+          'Similarly, if a borrower has not set up autopay yet, a modal would pop up upon logging in prompting them to set it up. Autopay increased significantly by 80%',
+      },
+      {
+        id: 3,
         path: '/acPics/bp/account-profile.png',
         alt: 'Account Profile',
         tab: 'Account Profile',
@@ -100,7 +116,7 @@ export const TIMELINEMODAL = [
           'Borrowers can confirm their information is correct, make updates, and select preferences. Before navigating away, the borrower will be asked if they want keep unsaved changes',
       },
       {
-        id: 2,
+        id: 4,
         path: '/acPics/bp/statements.png',
         alt: 'Statements & Documents',
         tab: 'Statements & Documents',
@@ -108,7 +124,7 @@ export const TIMELINEMODAL = [
           'One place for borrowers to upload/download important statements/documents related to their loan',
       },
       {
-        id: 3,
+        id: 5,
         path: '/acPics/bp/one-time-payment.png',
         alt: 'One time payment',
         tab: 'Payments',
@@ -116,7 +132,7 @@ export const TIMELINEMODAL = [
           'Borrowers can schedule one-time payments, if they have linked a bank account first',
       },
       {
-        id: 4,
+        id: 6,
         path: '/acPics/bp/payment-confirmation-modal.png',
         alt: 'Payment confirmation modal',
         tab: 'Payment Confirmation Modal',
@@ -124,7 +140,7 @@ export const TIMELINEMODAL = [
           'Borrowers can confirm all the information is correct before initiating a payment',
       },
       {
-        id: 5,
+        id: 7,
         path: '/acPics/bp/payment-history.png',
         alt: 'Payment history',
         tab: 'Payment History',
@@ -132,7 +148,7 @@ export const TIMELINEMODAL = [
           'Borrowers can see all their payments in one place, with relevant information for each payment, and there is a sorting feature as well',
       },
       {
-        id: 6,
+        id: 8,
         path: '/acPics/bp/payment-history-item.png',
         alt: 'Payment history item',
         tab: 'Payment Information Modal',
@@ -140,7 +156,7 @@ export const TIMELINEMODAL = [
           'Borrowers can click into each payment to get more information',
       },
       {
-        id: 7,
+        id: 9,
         path: '/acPics/bp/add-bank-account.png',
         alt: 'Add bank account',
         tab: 'Adding a Bank Account',
@@ -148,14 +164,14 @@ export const TIMELINEMODAL = [
           'Borrowers can link accounts manually through micro-deposits, which takes a few business days. Or they can go through the Plaid flow to link their accounts faster',
       },
       {
-        id: 8,
+        id: 10,
         path: '/acPics/bp/plaid-gregory.png',
         alt: 'Plaid Gregory',
         tab: 'Plaid Flow',
         description: 'The Plaid flow to link a bank account',
       },
       {
-        id: 9,
+        id: 11,
         path: '/acPics/bp/autopay-modal.png',
         alt: 'Autopay Modal BP',
         tab: 'Autopay Modal',
@@ -163,7 +179,7 @@ export const TIMELINEMODAL = [
           'Borrowers can set up/update autopay for any day of the month, and delete autopay. Certain loans are eligible for autopay, only these loans will have access to the form. Also, if the last day of the month ends before their chosen day to pay, the payment will be initiated on the last day of the month',
       },
       {
-        id: 10,
+        id: 12,
         path: '/acPics/as/as-home.png',
         alt: 'Aspen Suite Home',
         tab: 'Aspen Suite Home',
@@ -171,7 +187,15 @@ export const TIMELINEMODAL = [
           'This is the Aspen Suite landing page. The search can find loans by entering in loan ids, loan numbers, property addresses, or borrower last names',
       },
       {
-        id: 11,
+        id: 13,
+        path: '/acPics/as/apps.png',
+        alt: 'Aspen Suite Home',
+        tab: 'Aspen Suite Home',
+        description:
+          'These are the apps within the Admin Portal, allowing admins to view important information about the business in one place',
+      },
+      {
+        id: 14,
         path: '/acPics/as/autopay-buttons.png',
         alt: 'Autopay Set Up',
         tab: 'Autopay Set Up',
@@ -179,7 +203,7 @@ export const TIMELINEMODAL = [
           'I was the lead engineer for implementing Autopay set up/update/deletion in Aspen Suite for various eligible loan types, including writing the tests. This required logic on the Frontend & Backend (Java, Spring Boot)',
       },
       {
-        id: 12,
+        id: 15,
         path: '/acPics/as/autopay-modal.png',
         alt: 'Autopay Modal AS',
         tab: 'Autopay Modal',
@@ -243,7 +267,9 @@ export const TIMELINEMODAL = [
     company: 'PriceWaterhouseCoopers LLP',
     place: 'New York, N.Y.',
     date: 'January 2018 - April 2018',
-    bullets: ['', '', '', ''],
+    bullets: [
+      'I had the great opportunity of interning at a Big 4 Accounting Firm during their busy season. I was part of the team in the Alternative Investments division of PwC that was auditing the Financial Statements of a Hedge Fund in NYC. ',
+    ],
   },
   {
     id: 6,
@@ -253,10 +279,10 @@ export const TIMELINEMODAL = [
     place: 'New York, N.Y.',
     date: 'August 2016 - December 2017',
     bullets: [
-      'Taught undergraduate classes (approx. 35 students) in elementary algebra, college algebra & trigonometry, pre-calculus, and calculus',
-      'Created course syllabi and lectures in alignment with CUNY standards to ensure students perform their best on departmental exams',
-      'Designed homework problems of varying difficulty to reinforce concepts learned in class',
-      'Held office hours to address students’ concerns and develop study action plans to facilitate a better understanding of difficult concepts',
+      'Taught undergraduate courses, with about 35 students per class, at two CUNY campuses, Queens College & NYC College of Tecnology, in elementary algebra, college algebra & trigonometry, pre-calculus, and calculus',
+      'Created course syllabi and lectures in alignment with CUNY standards to ensure that students were able to perform their best on all departmental exams',
+      'Designed and went over homework problems of varying difficulty to reinforce concepts learned in class',
+      'Held office hours twice a week to address student concerns and develop study action plans to facilitate a better understanding of difficult concepts',
     ],
   },
   {

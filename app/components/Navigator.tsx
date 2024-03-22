@@ -11,7 +11,7 @@ const Navigator = () => {
   const path = usePathname();
 
   return (
-    <div className='fixed flex flex-col bg-transparent gap-10 text-md sm:text-2xl left-4 top-[25%] sm:top-[13.5%] w-[3%] text-white justify-center items-center py-4 rounded-lg z-[11]'>
+    <div className={`hidden lg:flex lg:text-2xl md:gap-6 lg:gap-10 text-white justify-center items-center lg:ml-0 lg:mr-10 ${path === '/timeline' ? 'absolute flex-col left-4 top-[150%]' : ''}`}>
       {NAV_LINKS.map((nav, i) => {
         return (
           <Link key={i} href={nav.path}>
@@ -22,7 +22,7 @@ const Navigator = () => {
               }`}
             >
               <nav.icon href={nav.path} className={`text-2xl`} />
-              <p className='text-xs mt-1'>{nav.text}</p>
+              <p className='text-sm mt-1'>{nav.text}</p>
             </motion.div>
           </Link>
         );

@@ -8,12 +8,12 @@ import { SKILLS1, SKILLS2 } from '../../constants/skills';
 import Headline from '../components/Headline';
 import { Skill } from '../types';
 
-const Page = () => {
+const Skills = () => {
   return (
-    <div className='h-screen w-screen flex items-center justify-center bg-cover bg-center'>
-      <div className='flex flex-col gap-5 sm:gap-20 max-w-[80%] text-center items-center'>
+    <div className='w-screen flex items-center justify-center bg-cover bg-center'>
+      <div className='flex flex-col gap-5 sm:gap-10 max-w-[80%] text-center items-center'>
         <div className='flex flex-col items-center gap-4'>
-          <div className='flex text-[24px] sm:text-[60px] gap-4'>
+          <div className='sm:flex text-[1.5rem] md:text-[2.5rem] lg:text-[3.75rem] gap-4 sm:mt-[20%] mt-[50%]'>
             <Headline headline='Skills' />
             <p className='font-bold text-white'>&amp;</p>
             <Headline headline='Technologies' />
@@ -46,7 +46,7 @@ const Page = () => {
           }}
           speed={3000}
           modules={[Autoplay]}
-          className='max-w-[80%] flex items-center justify-center text-center'
+          className='max-w-[80%]'
         >
           {SKILLS2.map((skill: Skill, index: number) => (
             <SwiperSlide key={index}>
@@ -59,4 +59,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Skills;

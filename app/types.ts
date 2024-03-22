@@ -29,3 +29,8 @@ export type Skill = {
   image: string;
   alt: string;
 };
+
+export type SelfImage = {
+  src: string;
+  alt: string;
+}

@@ -28,7 +28,7 @@ const Modal: React.FC<ModalProps> = ({ children, showModal, setShowModal }) => {
   return (
     <motion.div
       ref={modalRef} 
-      className={`fixed inset-0 w-screen h-screen bg-black/75 flex items-center justify-center z-[12] ${showModal ? 'overflow-y-hidden' : ''}`}
+      className='fixed inset-0 w-full h-full bg-black/75 flex items-center justify-center z-[20] height-limit'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

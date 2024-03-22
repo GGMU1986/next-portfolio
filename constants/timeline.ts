@@ -5,7 +5,8 @@ export const TIMELINEFRONT = [
     place: 'Aspen Capital - New York, NY',
     date: 'Aug 2022 - Present',
     className:
-      'absolute cursor-pointer left-[10%] top-[4%] sm:top-[5%] sm:left-[60%]',
+      'absolute cursor-pointer left-[10%] top-[4%] sm:top-[10%] lg:top-[5%] sm:left-[60%]',
+    
   },
   {
     type: 'dev',
@@ -37,7 +38,7 @@ export const TIMELINEFRONT = [
     place: 'Moody&apos;s Corporation - New York, NY',
     date: 'July 2018 - July 2021',
     className:
-      'absolute cursor-pointer left-[10%] top-[44%] sm:top-[46%] sm:left-[60%]',
+    'absolute cursor-pointer left-[10%] top-[44%] sm:top-[46%] sm:left-[60%]',
   },
   {
     type: 'work',
@@ -75,7 +76,7 @@ export const TIMELINEMODAL = [
     place: 'New York, N.Y.',
     date: 'August 2022 - Present',
     bullets: [
-      'At Aspen Capital, I assisted to build, and currently help maintain, and write tests for a user-facing app, an internal app, and the automated phone system. Additonally, I make improvements, and take part in a rotational on call for our microservices that maintain the nightly statement process, which assesses each loan for late fees or the creation of the monthly statements',
+      'At Aspen Capital, I assisted to build, and currently help maintain/write tests for, a user-facing app, an internal app, and the automated phone system. Additonally, I make improvements, and take part in a rotational on call for our microservices that maintain the nightly statement process, which assesses each loan for late fees or the creation of the monthly statements',
       'The user-facing app, or Borrower Portal (BP), for Gregory Funding, which is the mortgage servicing arm of Aspen Capital, allows borrowers to make payments, set up autopay, upload/download documents, view loan information/payment history, and update personal information, all while receiving email notifications. As of March 2024, the BP has 19,000+ active users, and averages 11,000+ payments for $20M+ in payment revenue per month',
       'The internal app is the Aspen Suite (AS), or the Admin Portal. Business analysts, product managers, developers, and other internal stakeholders can use the app to view relevant information about borrowers and loans. The app is the main resource for the Gregory Funding Call Center agents to assist, and perform actions on behalf of, the borrowers',
       'Many borrowers prefer to make payments over the phone, not through the BP, resulting in call wait times of over an hour. I helped design, develop, and deploy an automated phone system using the Twilio API, where borrowers can use the Interactive Voice Response (IVR) system to make payments, save bank accounts for future use, and setup/update/delete autopay. This greatly decreased pressure on the call center, reducing call wait times by one hour. As of March 2024, Twilio payments average about 3,000+ per month resulting in $5M+ in revenue',
@@ -217,7 +218,7 @@ export const TIMELINEMODAL = [
     type: 'dev',
     title: 'Software Engineer I',
     company: 'LynxDx, Inc.',
-    place: 'New York, N.Y.',
+    place: 'Ann Arbor, MI (Remote from NY)',
     date: 'February 2022 - July 2022',
     bullets: [
       'Helped rebuild the Laboratory Information Management System in 3 months from the ground up, resulting in improved performance, scalability, and user experience',

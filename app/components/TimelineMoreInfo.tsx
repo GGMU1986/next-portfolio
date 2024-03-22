@@ -64,7 +64,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`z-[20] w-[70rem] p-8 rounded-lg ${
+      className={`z-[8] lg:max-w-[70%] w-fit p-8 rounded-lg ${
         data.type === 'school'
           ? 'bg-blue-500'
           : data.type === 'work'
@@ -83,7 +83,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
           )}
         </div>
         <GrClose
-          className='relative text-2xl cursor-pointer text-white z-[21]'
+          className='relative text-2xl cursor-pointer text-white z-[11]'
           onClick={() => setShowModal(false)}
         />
       </div>
@@ -94,22 +94,29 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
         />
       ) : (
         <>
-          <div className='flex flex-col text-white py-2 mt-4 gap-2'>
-            <div className='flex justify-between items-center text-2xl font-semibold'>
-              <p>{data.company}</p>
-              <p>{data.place}</p>
+          <div className='flex flex-col text-white gap-2 mt-4 py-2  relative'>
+            {data.id === 0 ? <p className='xl:hidden text-center text-amber-300 text-[1.2rem]'>View on larger screen for more information</p> : <></>}
+            <div className='flex flex-col lg:flex-row justify-between items-center text-[1.4rem] lg:text-2xl font-semibold'>
+              <div className='xl:hidden'>
+                {data.company === 'City University of New York at Queens College' ? <p>CUNY Queens College</p> : <p>{data.company}</p>}
+              </div>
+              <p className='hidden xl:block'>{data.company}</p>
+              <p className={`${data.id === 1 ? 'text-[1.1rem] lg:text-2xl' : ''}`}>{data.place}</p>
             </div>
-            <div className='flex justify-between items-center text-xl italic'>
-              <p>{data.title}</p>
+            <div className={`flex flex-col lg:flex-row justify-between items-center ${data.id === 0 ? 'text-[1rem]' : 'text-[1.2rem]'} lg:text-xl italic`}>
+              <div className='lg:hidden'>
+                {data.title === 'Bachelor of Arts in Mathematics with Honors' ? <p>BA Mathematics with Honors</p> : <p>{data.title}</p>}
+              </div>
+              <p className='hidden lg:block'>{data.title}</p>
               <p>{data.date}</p>
             </div>
           </div>
-          <div className='px-8 flex flex-col text-white mt-4'>
+          <div className='px-4 lg:px-8 flex flex-col text-white mt-4'>
             {data.bullets ? (
               <ul>
                 {data.bullets.map((bullet: string, i: number): ReactElement => {
                   return (
-                    <li key={i} className='mt-4 text-md'>
+                    <li key={i} className={`${i > 0 && data.id === 0 ? 'mobile-list' : ''} mt-4 text-sm lg:text-md lg:list-disc`}>
                       {bullet}
                     </li>
                   );
@@ -122,11 +129,13 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
                 ) : (
                   <p className='text-2xl font-semibold'>Courses completed:</p>
                 )}
-                <p className='text-xl'>{data.classesTaken}</p>
+                <p className='text-lg lg:text-xl'>{data.classesTaken}</p>
               </div>
             )}
           </div>
-          {data.id === 0 ? <NextButton setNext={setNext} /> : <></>}
+          <div className='hidden xl:block'>
+            {data.id === 0 ? <NextButton setNext={setNext} /> : <></>}
+          </div>
         </>
       )}
     </motion.div>

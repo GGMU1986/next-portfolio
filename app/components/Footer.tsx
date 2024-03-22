@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 import { MdEmail } from 'react-icons/md';
 import { FaPhone, FaMapMarked } from 'react-icons/fa';
-import LinkText from './LinkText';
 
 const Footer = () => {
   const phone = {
@@ -24,18 +24,17 @@ const Footer = () => {
     alt: 'Location',
     text: 'New York, NY',
   };
-  // hidden sm:visible
+
+  const path = usePathname();
+
   return (
     <motion.div
-      className='fixed flex-col sm:flex-row sm:justify-between text-white bottom-0 z-[9] w-full h-[50px] sm:h-[80px] bg-transparent sm:flex items-center pl-4 sm:px-15'
-      initial={{ y: 50 }}
-      animate={{ y: 10 }}
+      className={`${ path === '/timeline' ? 'hidden' : '' } w-full h-[3.05rem] md:h-[3.75rem] lg:h-[5rem] text-[.6rem] md:text-[.70rem] lg:px-4 lg:text-[.95rem] bg-transparent flex flex-col justify-center xl:flex-row xl:items-center pl-4 xl:px-15 text-white xl:justify-between`}
     >
-      <div className='text-[8px] sm:text-sm'>
-        &copy; {new Date().getFullYear()} Built by George Tsimis - Next.js,
-        TypeScript, Tailwind CSS, Framer Motion
+      <div className=''>
+        &copy; {new Date().getFullYear()} Built by George Tsimis <span className='hidden md:inline'>-</span> <br className='md:hidden' />Next.js, TypeScript, Tailwind CSS, Framer Motion
       </div>
-      <div className='flex sm:justify-around items-center text-[8px] sm:px-4 sm:text-[15px] gap-2 sm:gap-10'>
+      <div className='flex xl:justify-around items-center gap-2 sm:gap-10'>
         <div className='flex items-center hover:text-amber-300 cursor-auto'>
           <location.icon />
           <p className='ml-1 sm:ml-2'>{location.text}</p>
@@ -44,11 +43,15 @@ const Footer = () => {
           <phone.icon />
           <p className='ml-1 sm:ml-2'>{phone.text}</p>
         </div>
-        <LinkText
-          href='mailto: gt2186@gmail.com'
-          text={email.text}
-          className='flex items-center hover:text-amber-300 cursor-pointer'
-        />
+        <motion.div
+          whileHover={{ 
+            scale: 1.1,
+            textShadow: '0px 0px 8px'
+          }} 
+          className='flex items-center hover:text-amber-300 cursor-pointer bottom-0'>
+          <email.icon />
+          <p className='ml-1 sm:ml-2'>{email.text}</p>
+        </motion.div>
       </div>
     </motion.div>
   );

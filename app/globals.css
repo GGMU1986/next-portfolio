@@ -8,4 +8,18 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
 
+@media only screen and (max-width: 1180px) {
+  .mobile-list {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 414px) {
+  .height-limit {
+    display: none;
+  }
+}

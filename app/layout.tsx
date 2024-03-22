@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import React from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Navigator from "./components/Navigator";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='bg-slate-600 scroll-smooth'>
-      <body className={`${inter.className} h-screen w-screen relative`}>
-        <Navigator />
+    <html lang="en" className='bg-slate-600'>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Navbar />
-        {children}
+        <div className='grow'>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

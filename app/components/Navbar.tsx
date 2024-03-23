@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`fixed top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between justify-center items-center px-10 sm:px-20 ${ scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent' }`}
+      className={`fixed top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between justify-center items-center px-6 sm:px-20 ${ scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent' }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >

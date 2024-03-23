@@ -11,16 +11,15 @@ import { AnimatePresence } from 'framer-motion';
 const Timeline = () => {
   const [showModal, setShowModal] = useState(false);
   const [index, setIndex] = useState(-1);
-  
   // Map this after figuring out tailwind bug
   return (
     <div className='relative'>
-      <div className='absolute top-[3.2rem] sm:top-[5rem] lg:top-[8rem] left-[10%] sm:left-[5%] lg:left-[10%] text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3.1rem] flex gap-4 z-[9]'>
+      <div className='sm:pl-[10%] text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3.1rem] flex sm:justify-start justify-center gap-4'>
         <Headline headline='Experience' />
         <p className='font-bold text-white'>&amp;</p>
         <Headline headline='Education' />
       </div>
-      <div className='relative mt-[5rem] sm:mt-0'>
+      <div className='relative'>
         <TimelineInfo
           id={0}
           type='dev'

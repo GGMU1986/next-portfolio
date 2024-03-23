@@ -14,13 +14,11 @@ const Timeline = () => {
   
   // Map this after figuring out tailwind bug
   return (
-    <div className='h-screen w-screen'>
-      <div className='text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3.1rem] relative'>
-        <div className='absolute -top-[1.5rem] sm:top-[5rem] lg:top-[8rem] left-[10%] sm:left-[5%] lg:left-[10%] flex gap-4 z-[9]'>
-          <Headline headline='Experience' />
-          <p className='font-bold text-white'>&amp;</p>
-          <Headline headline='Education' />
-        </div>
+    <div className='relative'>
+      <div className='absolute -top-[1.5rem] sm:top-[5rem] lg:top-[8rem] left-[10%] sm:left-[5%] lg:left-[10%] text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3.1rem] flex gap-4 z-[9]'>
+        <Headline headline='Experience' />
+        <p className='font-bold text-white'>&amp;</p>
+        <Headline headline='Education' />
       </div>
       <div className='relative mt-[5rem] sm:mt-0'>
         <TimelineInfo

@@ -21,9 +21,7 @@ export default function RootLayout({
     <html lang="en" className='bg-slate-600'>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Navbar />
-        <div className='grow'>
-          {children}
-        </div>
+        {children}
         <Footer />
       </body>
     </html>

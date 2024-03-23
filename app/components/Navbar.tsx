@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`fixed top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between justify-center items-center px-6 sm:px-20 ${ scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent' }`}
+      className={`sticky top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between justify-center items-center px-6 sm:px-20 ${ scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent' }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >
@@ -34,7 +34,7 @@ const Navbar = () => {
           href='/'
           src='/favicon.ico'
           alt='Logo'
-          className='w-[1.77rem] h-[1.77rem] md:w-[3.05rem] md:h-[3.05rem] lg:w-[4.2rem] lg:h-[4.2rem] rounded-full shadow-glow ml-2 mr-10'
+          className='w-[1.77rem] h-[1.77rem] md:w-[3.05rem] md:h-[3.05rem] lg:w-[4.2rem] lg:h-[4.2rem] rounded-full shadow-glow ml-2 lg:ml-0 mr-10'
         />
         <Navigator />
       </div>

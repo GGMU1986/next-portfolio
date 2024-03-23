@@ -14,7 +14,7 @@ const Gallery = () => {
     <div className='flex flex-col items-center justify-center'>
       <Headline
         headline='Gallery'
-        className='text-[1.5rem] lg:text-[2.5rem] xl:text-[3.75rem] mt-[15%] sm:mt-[8%] md:mt-[8%] lg:mt-[10%]'
+        className='text-[1.5rem] lg:text-[2.5rem] xl:text-[3.75rem]'
       />
       <div>
         {PICS.map((pic, i) => {

@@ -55,7 +55,7 @@ const Navbar = () => {
           target='_blank'
         />
         <LinkImg
-          href='https://github.com/GGMU1986'
+          href='https://github.com/GGMU1986/next-portfolio'
           src='/navbar/github.png'
           alt='linkedin'
           className='shadow-glow rounded-full w-[1.77rem] h-[1.77rem] md:w-[2.5rem] md:h-[2.5rem] lg:w-[3.1rem] lg:h-[3.1rem] hover:hoverGlow'

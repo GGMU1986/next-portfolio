@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  ul, ol {
+  ul,
+  ol {
     list-style: revert;
   }
 }
@@ -34,22 +35,22 @@
   }
 
   .resume-icon-show {
-    display: block
+    display: block;
   }
 }
 
 @media only screen and (min-width: 300px) {
   .resume-icon-hide {
-    display: none
+    display: none;
   }
 }
 
 @layer utilities {
   .nav::after {
-    @apply content-[''] bg-pink-500 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300
+    @apply content-[''] bg-pink-500 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
   }
 
   .nav:hover::after {
-    @apply w-[100%]
+    @apply w-[100%];
   }
 }

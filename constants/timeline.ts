@@ -296,3 +296,54 @@ export const TIMELINEMODAL = [
       'Differential Calculus, Integral Calculus, Multivariable Calculus, Advanced Calculus, Linear Algebra I & II, Differential Equations, Probability & Statistics, Newtonian Physics I & II',
   },
 ];
+
+export const TIMELINE_IMGS = [
+  {
+    src: '/timelinePics/aspen.jpeg',
+    alt: 'Aspen',
+    className:
+      'absolute w-[50px] h-[50px] left-[44%] sm:left-[46.5%] md:left-[47.5%] lg:left-[47.75%] xl:left-[48.25%] 2xl:left-[70%] rounded-2xl top-[9%] sm:top-[3.5%] lg:top-[4%]',
+  },
+  {
+    src: '/timelinePics/lynx.png',
+    alt: 'Lynx',
+    className:
+      'absolute w-[50px] h-[50px] left-[44%] sm:left-[46.5%] md:left-[47.5%] lg:left-[47.75%] xl:left-[48.25%] rounded-2xl top-[21%] sm:top-[14.5%] lg:top-[16%]',
+  },
+  {
+    src: '/timelinePics/aa.png',
+    alt: 'AA',
+    className:
+      'absolute w-[50px] h-[50px] left-[44%] sm:left-[46.5%] md:left-[47.5%] lg:left-[47.75%] xl:left-[48.25%] rounded-2xl top-[33%] sm:top-[25.5%] lg:top-[28%]',
+  },
+  {
+    src: '/timelinePics/QC.png',
+    alt: 'QC',
+    className:
+      'absolute w-[50px] h-[50px] left-[44%] sm:left-[46.5%] md:left-[47.5%] lg:left-[47.75%] xl:left-[48.25%] rounded-2xl top-[45%] sm:top-[36.5%] lg:top-[40%]',
+  },
+  {
+    src: '/timelinePics/moodys.png',
+    alt: 'Moodys',
+    className:
+      'absolute w-[50px] h-[50px] left-[44%] sm:left-[46.5%] md:left-[47.5%] lg:left-[47.75%] xl:left-[48.25%] rounded-2xl top-[57%] sm:top-[47.5%] lg:top-[52%]',
+  },
+  {
+    src: '/timelinePics/pwc.png',
+    alt: 'PWC',
+    className:
+      'absolute w-[50px] h-[50px] left-[44%] sm:left-[46.5%] md:left-[47.5%] lg:left-[47.75%] xl:left-[48.25%] rounded-2xl top-[69%] sm:top-[58.5%] lg:top-[64%]',
+  },
+  {
+    src: '/timelinePics/cuny.png',
+    alt: 'QC',
+    className:
+      'absolute md:left-[47.5%] left-[44%] sm:left-[46.5%] lg:left-[47.75%] xl:left-[48.25%] top-[81%] sm:top-[69.5%] lg:top-[76%] w-[50px] h-[50px] rounded-2xl',
+  },
+  {
+    src: '/timelinePics/QC.png',
+    alt: 'QC',
+    className:
+      'absolute top-[80%] left-[44%] sm:left-[46.5%] md:left-[47.5%] top-[93%] lg:left-[47.75%] xl:left-[48.25%] sm:top-[80.5%] lg:top-[88%] w-[50px] h-[50px] rounded-2xl',
+  },
+];

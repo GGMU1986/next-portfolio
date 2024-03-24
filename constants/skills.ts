@@ -50,9 +50,10 @@ export const SKILLS1 = [
   {
     image: '/skills/git.png',
     alt: 'intercom',
-  }
-]
-export const SKILLS2 = [ 
+  },
+];
+
+export const SKILLS2 = [
   {
     image: '/skills/webpack.png',
     alt: 'webpack',

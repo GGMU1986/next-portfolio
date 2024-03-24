@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 interface ModalProps {
   children: JSX.Element;
   showModal: boolean;
-  setShowModal: (state: boolean) => void
+  setShowModal: (state: boolean) => void;
 }
 
 const Modal: React.FC<ModalProps> = ({ children, showModal, setShowModal }) => {
@@ -17,17 +17,17 @@ const Modal: React.FC<ModalProps> = ({ children, showModal, setShowModal }) => {
       if (e.keyCode === 27) {
         setShowModal(false);
       }
-    }
-  
+    };
+
     document.addEventListener('keydown', escHandler);
     return () => {
       document.removeEventListener('keydown', escHandler);
-    }
-  })
-  
+    };
+  });
+
   return (
     <motion.div
-      ref={modalRef} 
+      ref={modalRef}
       className='fixed inset-0 w-full h-full bg-black/75 flex items-center justify-center z-[20] height-limit'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ children, showModal, setShowModal }) => {
     >
       {children}
     </motion.div>
-  )
-}
+  );
+};
 
 export default Modal;

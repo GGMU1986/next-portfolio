@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React from 'react';
 import Link from 'next/link';
 
@@ -11,19 +11,24 @@ interface LinkTextProps {
   target?: string;
 }
 
-const LinkText: React.FC<LinkTextProps> = ({ href, text, className, target }) => {
+const LinkText: React.FC<LinkTextProps> = ({
+  href,
+  text,
+  className,
+  target,
+}) => {
   return (
     <Link href={href} target={target} className={className}>
       <motion.p
-        whileHover={{ 
+        whileHover={{
           scale: 1.1,
-          textShadow: '0px 0px 8px'
+          textShadow: '0px 0px 8px',
         }}
       >
         {text}
       </motion.p>
     </Link>
-  )
-}
+  );
+};
 
 export default LinkText;

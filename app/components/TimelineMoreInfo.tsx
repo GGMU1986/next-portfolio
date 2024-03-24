@@ -95,17 +95,43 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
       ) : (
         <>
           <div className='flex flex-col text-white gap-2 mt-4 py-2  relative'>
-            {data.id === 0 ? <p className='xl:hidden text-center text-amber-300 text-[1.2rem]'>View on larger screen for more information</p> : <></>}
+            {data.id === 0 ? (
+              <p className='xl:hidden text-center text-amber-300 text-[1.2rem]'>
+                View on larger screen for more information
+              </p>
+            ) : (
+              <></>
+            )}
             <div className='flex flex-col lg:flex-row justify-between items-center text-[1.4rem] lg:text-2xl font-semibold'>
               <div className='xl:hidden'>
-                {data.company === 'City University of New York at Queens College' ? <p>CUNY Queens College</p> : <p>{data.company}</p>}
+                {data.company ===
+                'City University of New York at Queens College' ? (
+                  <p>CUNY Queens College</p>
+                ) : (
+                  <p>{data.company}</p>
+                )}
               </div>
               <p className='hidden xl:block'>{data.company}</p>
-              <p className={`${data.id === 1 ? 'text-[1.1rem] lg:text-2xl' : ''}`}>{data.place}</p>
+              <p
+                className={`${
+                  data.id === 1 ? 'text-[1.1rem] lg:text-2xl' : ''
+                }`}
+              >
+                {data.place}
+              </p>
             </div>
-            <div className={`flex flex-col lg:flex-row justify-between items-center ${data.id === 0 ? 'text-[1rem]' : 'text-[1.2rem]'} lg:text-xl italic`}>
+            <div
+              className={`flex flex-col lg:flex-row justify-between items-center ${
+                data.id === 0 ? 'text-[1rem]' : 'text-[1.2rem]'
+              } lg:text-xl italic`}
+            >
               <div className='lg:hidden'>
-                {data.title === 'Bachelor of Arts in Mathematics with Honors' ? <p>BA Mathematics with Honors</p> : <p>{data.title}</p>}
+                {data.title ===
+                'Bachelor of Arts in Mathematics with Honors' ? (
+                  <p>BA Mathematics with Honors</p>
+                ) : (
+                  <p>{data.title}</p>
+                )}
               </div>
               <p className='hidden lg:block'>{data.title}</p>
               <p>{data.date}</p>
@@ -116,7 +142,12 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
               <ul>
                 {data.bullets.map((bullet: string, i: number): ReactElement => {
                   return (
-                    <li key={i} className={`${i > 0 && data.id === 0 ? 'mobile-list' : ''} mt-4 text-sm lg:text-md lg:list-disc`}>
+                    <li
+                      key={i}
+                      className={`${
+                        i > 0 && data.id === 0 ? 'mobile-list' : ''
+                      } mt-4 text-sm lg:text-md lg:list-disc`}
+                    >
                       {bullet}
                     </li>
                   );

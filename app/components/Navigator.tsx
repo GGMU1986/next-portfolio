@@ -7,7 +7,7 @@ import { NAV_LINKS } from '@/constants/navLinks';
 
 const Navigator = () => {
   const path = usePathname();
-  
+
   return (
     <div className='hidden lg:flex lg:text-2xl md:gap-6 font-mono tracking-[.1rem] lg:gap-10 text-white justify-center items-center lg:ml-0 lg:mr-10'>
       {NAV_LINKS.map((nav, i) => {

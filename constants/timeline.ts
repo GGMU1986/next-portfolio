@@ -6,7 +6,6 @@ export const TIMELINEFRONT = [
     date: 'Aug 2022 - Present',
     className:
       'absolute cursor-pointer left-[10%] top-[4%] sm:top-[10%] lg:top-[5%] sm:left-[60%]',
-    
   },
   {
     type: 'dev',
@@ -38,7 +37,7 @@ export const TIMELINEFRONT = [
     place: 'Moody&apos;s Corporation - New York, NY',
     date: 'July 2018 - July 2021',
     className:
-    'absolute cursor-pointer left-[10%] top-[44%] sm:top-[46%] sm:left-[60%]',
+      'absolute cursor-pointer left-[10%] top-[44%] sm:top-[46%] sm:left-[60%]',
   },
   {
     type: 'work',

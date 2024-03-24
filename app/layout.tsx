@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import React from "react";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import React from 'react';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "George Tsimis",
-  description: "This is my personal site",
+  title: 'George Tsimis',
+  description: 'This is my personal site',
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='bg-slate-600'>
+    <html lang='en' className='bg-slate-600'>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Navbar />
         {children}

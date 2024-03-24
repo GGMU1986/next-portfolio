@@ -7,7 +7,7 @@ import LinkText from './LinkText';
 import MobileNav from './MobileNav';
 import Navigator from './Navigator';
 
-import { IoDocumentText } from "react-icons/io5";
+import { IoDocumentText } from 'react-icons/io5';
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -15,16 +15,18 @@ const Navbar = () => {
   useEffect(() => {
     const updatePosition = () => {
       setScrollPosition(window.pageYOffset);
-    }
+    };
 
     window.addEventListener('scroll', updatePosition);
 
     return () => window.removeEventListener('scroll', updatePosition);
-  }, [])
+  }, []);
 
   return (
     <motion.div
-      className={`sticky top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between justify-center items-center px-6 sm:px-20 ${ scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent' }`}
+      className={`sticky top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between justify-center items-center px-6 sm:px-20 ${
+        scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent'
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >
@@ -39,8 +41,12 @@ const Navbar = () => {
         <Navigator />
       </div>
       <div className='flex gap-5 sm:gap-10 cursor-pointer text-white items-center gap-small'>
-        <Link href='/navbar/George_Tsimis_Resume.pdf' target='blank' className='text-[1rem]'>
-          <IoDocumentText  className='resume-icon-show resume-icon-hide'/>
+        <Link
+          href='/navbar/George_Tsimis_Resume.pdf'
+          target='blank'
+          className='text-[1rem]'
+        >
+          <IoDocumentText className='resume-icon-show resume-icon-hide' />
         </Link>
         <LinkText
           href='/navbar/George_Tsimis_Resume.pdf'

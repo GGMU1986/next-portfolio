@@ -13,8 +13,8 @@ const Timeline = () => {
   const [index, setIndex] = useState(-1);
 
   return (
-    <div className='relative max-w-[80%] mx-[20px] sm:mx-[100px] my-auto timeline'>
-      <div className='sm:pl-[10%] text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3.1rem] flex sm:justify-start justify-center gap-4'>
+    <div className='relative max-w-[80%] mx-[20px] sm:mx-[50px] md:mx-[100px] my-auto timeline'>
+      <div className='pl-[18%] mb-[5%] sm:mb-0 sm:pl-0 md:pl-[10%] text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3.1rem] flex sm:justify-start justify-center gap-3 md:gap-4'>
         <Headline headline='Experience' />
         <p className='font-bold text-white'>&amp;</p>
         <Headline headline='Education' />

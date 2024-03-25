@@ -32,8 +32,10 @@ const TimelineInfo: React.FC<TimelineInfoProps> = ({
   return (
     <div
       key={id}
-      className={`relative w-full sm:w-1/2 pl-[80px] pr-[25px] sm:py-[10px] sm:px-[10%] -left-[3%] ${
-        id % 2 === 0 ? 'sm:left-[55%]' : 'sm:left-[10%]'
+      className={`relative w-full sm:w-1/2 pl-[30%] sm:py-[10px] sm:px-[10%] md:px-[3%] lg:px-[4%] -left-[3%] ${
+        id % 2 === 0
+          ? 'sm:left-[55%] md:left-[62%] 2xl:left-[66%]'
+          : 'sm:-left-[9%] md:-left-[2%] lg:-left-[7%] xl:left-[2%] 2xl:left-[12%]'
       }`}
       onClick={() => {
         setIndex(id);
@@ -43,33 +45,24 @@ const TimelineInfo: React.FC<TimelineInfoProps> = ({
       <img
         src={src}
         alt={alt}
-        className={`w-[50px] h-[50px] rounded-xl z-[10] absolute top-[37%] left-[5.5%] ${
-          id % 2 === 0 ? 'sm:-left-[4.5%]' : 'sm:-right-[20.5%]'
+        className={`hover:animate-spin w-[50px] h-[50px] rounded-xl z-[10] absolute top-[27%] sm:top-[37%] cursor-pointer ${
+          id % 2 === 0
+            ? 'left-[5.25%] sm:-left-[9.5%] md:-left-[22%] lg:-left-[20.75%] xl:-left-[19.5%] 2xl:-left-[26.25%]'
+            : 'left-container'
         }`}
       />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: id + 0.5, ease: 'easeIn' }}
-        // whileHover={{
-        //   scale: 1.1,
-        //   backgroundColor: `${
-        //     type === 'school'
-        //       ? 'blue'
-        //       : type === 'work'
-        //       ? 'midnightblue'
-        //       : 'cadetblue'
-        //   }`,
-        //   transition: { duration: 0.3 },
-        // }}
         className={`
         ${
           type === 'school'
-            ? 'bg-blue-500'
+            ? 'bg-blue-500 hover:bg-blue-400'
             : type === 'work'
-            ? 'bg-blue-700'
-            : 'bg-cyan-900'
-        } border rounded-lg shadow-glow w-[250px] h-[115px] lg:w-[350px] lg:h-[200px] z-[10] text-white flex flex-col items center mb-[20px] sm:mb-0 px-4 lg:p-6 gap-1 lg:gap-2 cursor-pointer relative
+            ? 'bg-blue-700 hover:bg-blue-800'
+            : 'bg-cyan-900 hover:bg-cyan-800'
+        } border rounded-lg shadow-glow w-[250px] h-[115px] lg:w-[350px] lg:h-[200px] z-[10] text-white flex flex-col items center mb-[20px] sm:mb-0 px-4 lg:p-6 gap-1 lg:gap-2 cursor-pointer relative hover:scale-110 transform transition duration-300
       `}
       >
         <div className='absolute top-1 right-2 sm:top-2 sm:right-4 text-sm lg:text-xl'>

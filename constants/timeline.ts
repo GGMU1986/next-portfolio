@@ -4,48 +4,48 @@ export const TIMELINEFRONT = [
     title: 'Associate Software Engineer',
     place: 'Aspen Capital - New York, NY',
     date: 'Aug 2022 - Present',
-    className:
-      'absolute cursor-pointer left-[10%] top-[4%] sm:top-[10%] lg:top-[5%] sm:left-[60%]',
+    src: '/logos/aspen.jpeg',
+    alt: 'Aspen',
   },
   {
     type: 'dev',
     title: 'Software Engineer I',
     place: 'LynxDx, Inc - Ann Arbor, MI',
     date: 'Feb 2022 - July 2022',
-    className:
-      'absolute cursor-pointer left-[10%] top-[14%] sm:top-[16%] sm:left-[22%]',
+    src: '/logos/lynx.png',
+    alt: 'Lynx',
   },
   {
     type: 'school',
     title: 'Coding Bootcamp',
     place: 'App Academy - New York, NY',
     date: 'Nov 2021',
-    className:
-      'absolute cursor-pointer left-[10%] top-[24%] sm:top-[26%] sm:left-[60%]',
+    src: '/logos/aa.png',
+    alt: 'AA',
   },
   {
     type: 'school',
     title: 'MA Mathematics',
     place: 'Queens College - New York, NY',
     date: 'Sept 2021',
-    className:
-      'absolute cursor-pointer left-[10%] top-[34%] sm:top-[36%] sm:left-[22%]',
+    src: '/logos/QC.png',
+    alt: 'QC',
   },
   {
     type: 'work',
     title: 'Financial Data Analyst',
-    place: 'Moody&apos;s Corporation - New York, NY',
+    place: "Moody's Corporation - New York, NY",
     date: 'July 2018 - July 2021',
-    className:
-      'absolute cursor-pointer left-[10%] top-[44%] sm:top-[46%] sm:left-[60%]',
+    src: '/logos/moodys.png',
+    alt: '',
   },
   {
     type: 'work',
     title: 'Assurance Intern',
     place: 'PriceWaterhouseCoopers - New York, NY',
     date: 'Jan 2018 - Apr 2018',
-    className:
-      'absolute cursor-pointer left-[10%] top-[54%] sm:top-[56%] sm:left-[22%]',
+    src: '/logos/pwc.png',
+    alt: 'PwC',
   },
   {
     type: 'work',
@@ -53,16 +53,16 @@ export const TIMELINEFRONT = [
     place: 'CUNY - New York, NY',
     date: 'Aug 2016 - Dec 2017',
     info: 'Classes taught: Pre-calculus, Calculus',
-    className:
-      'absolute cursor-pointer left-[10%] top-[64%] sm:top-[66%] sm:left-[60%]',
+    src: '/logos/cuny.png',
+    alt: 'Adjunct',
   },
   {
     type: 'school',
     title: 'BA Mathematics',
     place: 'Queens College - New York, NY',
     date: 'June 2016',
-    className:
-      'absolute cursor-pointer left-[10%] top-[74%] sm:top-[76%] left-[10%] sm:left-[22%]',
+    src: '/logos/QC.png',
+    alt: 'QC BA',
   },
 ];
 

@@ -17,6 +17,7 @@ const config: Config = {
       },
       animation: {
         'border-spin': 'border-spin 7s linear infinite',
+        moveline: 'moveline 8s linear forwards',
       },
       boxShadow: {
         glow: '0 0 20px theme(colors.white)',

@@ -7,7 +7,7 @@ import { PICS } from '../../constants/pics';
 import Headline from '../components/Headline';
 
 const Gallery = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState<number>(0);
   const length = PICS.length;
 
   return (

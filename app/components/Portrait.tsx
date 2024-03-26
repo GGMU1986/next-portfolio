@@ -7,7 +7,7 @@ import { SELF_IMGS } from '@/constants/self';
 import { SelfImage } from '../types';
 
 const Portrait = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState<number>(0);
   const length = SELF_IMGS.length;
 
   return (

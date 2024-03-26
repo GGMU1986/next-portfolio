@@ -6,7 +6,7 @@ import { GrClose } from 'react-icons/gr';
 import { NAV_LINKS } from '@/constants/navLinks';
 
 const MobileNav = () => {
-  const [mobileSlider, setMobileSlider] = useState(false);
+  const [mobileSlider, setMobileSlider] = useState<boolean>(false);
 
   return (
     <>
@@ -20,7 +20,7 @@ const MobileNav = () => {
       <div
         className={`absolute lg:hidden top-0 ${
           mobileSlider ? 'left-0' : 'left-[-100%]'
-        } right-0 bottom-0 w-full h-screen flex flex-col justify-center items-center text-center text-white bg-black text-center ease-in duration-300 z-[20]`}
+        } right-0 bottom-0 w-full h-screen flex flex-col justify-center items-center text-center text-white bg-black ease-in duration-300 z-[20]`}
       >
         <GrClose
           size={25}

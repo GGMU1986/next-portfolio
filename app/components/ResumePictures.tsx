@@ -18,7 +18,7 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
   const length = picsArray.length;
 
   return (
-    <div>
+    <div className='px-16'>
       <div>
         {picsArray.map((pic) => {
           return (
@@ -49,13 +49,13 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
                     {pic.description}
                   </div>
                   <IoIosArrowDropleftCircle
-                    className='text-[30px] text-white absolute left-[2%] cursor-pointer'
+                    className='text-[30px] text-white absolute -left-[5%] cursor-pointer'
                     onClick={() =>
                       setCurrent(current === 0 ? length - 1 : current - 1)
                     }
                   />
                   <IoIosArrowDroprightCircle
-                    className='text-[30px] text-white absolute right-[2%] cursor-pointer'
+                    className='text-[30px] text-white absolute -right-[5%] cursor-pointer'
                     onClick={() =>
                       setCurrent(current === length - 1 ? 0 : current + 1)
                     }

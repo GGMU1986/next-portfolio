@@ -28,7 +28,7 @@ const NextButton: React.FC<NextButtonProps> = ({ setNext }) => {
         <motion.div
           initial={{ x: -10 }}
           animate={{ x: 10 }}
-          transition={{ duration: 1, ease: 'linear', repeat: Infinity }}
+          transition={{ duration: 1, ease: 'easeInOut', repeat: Infinity }}
         >
           <GrFormNextLink className='text-[25px]' />
         </motion.div>

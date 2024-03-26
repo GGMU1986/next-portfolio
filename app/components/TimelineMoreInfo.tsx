@@ -21,7 +21,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
   setShowModal,
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  const [next, setNext] = useState(false);
+  const [next, setNext] = useState<boolean>(false);
 
   useEffect(() => {
     const mouseHandler = (e: any) => {

@@ -9,7 +9,7 @@ interface SpanTextProps {
 }
 
 const SpanText: React.FC<SpanTextProps> = ({ children }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const controls = useAnimationControls();
   const bouncingLetters = () => {
     controls.start({

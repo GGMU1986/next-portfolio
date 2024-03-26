@@ -10,7 +10,7 @@ import Navigator from './Navigator';
 import { IoDocumentText } from 'react-icons/io5';
 
 const Navbar = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
 
   useEffect(() => {
     const updatePosition = () => {

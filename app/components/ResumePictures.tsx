@@ -14,7 +14,7 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
   setNext,
   picsArray,
 }) => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState<number>(0);
   const length = picsArray.length;
 
   return (

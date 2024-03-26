@@ -10,7 +10,7 @@ import TimelineMoreInfo from '../components/TimelineMoreInfo';
 
 const Timeline = () => {
   const [showModal, setShowModal] = useState(false);
-  const [index, setIndex] = useState(-1);
+  const [index, setIndex] = useState<number>(-1);
 
   return (
     <div className='relative max-w-[80%] mx-[20px] sm:mx-[50px] md:mx-[100px] my-auto timeline'>

@@ -65,7 +65,7 @@
       transparent 80deg
     );
 
-    @apply h-[150%] w-[150%] left-[-25%] -top-[25%] content-[''] absolute animate-border-spin;
+    @apply h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] absolute animate-border-spin;
   }
 }
 
@@ -80,6 +80,15 @@
   margin-left: 9.8%;
   z-index: -1;
   animation: moveline 8s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
 }
 
 @media only screen and (max-width: 540px) {
@@ -138,14 +147,5 @@
 @media only screen and (min-width: 1536px) {
   .left-container {
     left: 81.75%;
-  }
-}
-
-@keyframes moveline {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
   }
 }

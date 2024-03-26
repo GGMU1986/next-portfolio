@@ -29,9 +29,6 @@ const Portrait = () => {
                 src={self.src}
                 alt={self.alt}
                 className='rounded-xl shadow-glow mt-4 w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] object-cover'
-                // onClick={() =>
-                //   setCurrent(current === length - 1 ? 0 : current + 1)
-                // }
               />
             ) : (
               <></>

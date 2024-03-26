@@ -53,6 +53,20 @@
   .nav:hover::after {
     @apply w-[100%];
   }
+
+  .card-wrapper {
+    @apply relative bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden;
+  }
+
+  .card-wrapper::before {
+    background: conic-gradient(
+      rgba(245, 236, 39, 0.8) 0deg,
+      rgba(39, 245, 228, 0.8) 0deg,
+      transparent 80deg
+    );
+
+    @apply h-[150%] w-[150%] left-[-25%] -top-[25%] content-[''] absolute animate-border-spin;
+  }
 }
 
 .timeline::after {
@@ -75,55 +89,55 @@
   }
 
   .left-container {
-    left: 5.25%
+    left: 5.25%;
   }
 }
 
 @media only screen and (min-width: 640px) {
   .left-container {
-    right: -36%
+    right: -36%;
   }
 }
 
 @media only screen and (min-width: 741px) {
   .left-container {
-    right: -22.75%
+    right: -22.75%;
   }
 }
 
 @media only screen and (min-width: 844px) {
   .left-container {
-    right: -21.5%
+    right: -21.5%;
   }
 }
 
 @media only screen and (min-width: 896px) {
   .left-container {
-    right: -20.5%
+    right: -20.5%;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .left-container {
-    right: -29.5%
+    right: -29.5%;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .left-container {
-    left: 85.75%
+    left: 85.75%;
   }
 }
 
 @media only screen and (min-width: 1360px) {
   .left-container {
-    left: 100.5%
+    left: 100.5%;
   }
 }
 
 @media only screen and (min-width: 1536px) {
   .left-container {
-    left: 81.75%
+    left: 81.75%;
   }
 }
 

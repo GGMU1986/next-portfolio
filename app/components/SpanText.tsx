@@ -5,10 +5,10 @@ import { useAnimationControls } from 'framer-motion';
 import { motion } from 'framer-motion';
 
 interface SpanTextProps {
-  children: string;
+  letter: string;
 }
 
-const SpanText: React.FC<SpanTextProps> = ({ children }) => {
+const SpanText: React.FC<SpanTextProps> = ({ letter }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const controls = useAnimationControls();
   const bouncingLetters = () => {
@@ -32,7 +32,7 @@ const SpanText: React.FC<SpanTextProps> = ({ children }) => {
       onAnimationComplete={() => setIsPlaying(false)}
       className='inline-block gap-2 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-yellow-500 hover:to-cyan-500'
     >
-      {children}
+      {letter}
     </motion.span>
   );
 };

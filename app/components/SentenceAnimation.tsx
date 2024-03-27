@@ -16,7 +16,7 @@ const SentenceAnimation: React.FC<SentenceAnimationProps> = ({
   return (
     <div className={className}>
       {_phrase.map((letter, i) => {
-        return <SpanText key={i} children={letter} />;
+        return <SpanText key={i} letter={letter} />;
       })}
     </div>
   );

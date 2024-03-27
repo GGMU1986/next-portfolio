@@ -21,17 +21,19 @@ const Timeline = () => {
       </div>
       {TIMELINEFRONT.map((el, i) => {
         return (
-          <TimelineInfo
-            id={i}
-            type={el.type}
-            title={el.title}
-            place={el.place}
-            date={el.date}
-            src={el.src}
-            alt={el.alt}
-            setShowModal={setShowModal}
-            setIndex={setIndex}
-          />
+          <div key={i}>
+            <TimelineInfo
+              id={i}
+              type={el.type}
+              title={el.title}
+              place={el.place}
+              date={el.date}
+              src={el.src}
+              alt={el.alt}
+              setShowModal={setShowModal}
+              setIndex={setIndex}
+            />
+          </div>
         );
       })}
       <AnimatePresence>

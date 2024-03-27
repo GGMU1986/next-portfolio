@@ -2,32 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1180px) {
+  .mobile-list {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 414px) {
+  .height-limit {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .small-screen {
+    display: none;
+  }
+
+  .gap-small {
+    gap: 10px;
+  }
+
+  .resume-icon-show {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  .resume-icon-hide {
+    display: none;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .nav::after {
+    @apply content-[''] bg-pink-500 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
+  }
+
+  .nav:hover::after {
+    @apply w-[100%];
+  }
+
+  .card-wrapper {
+    @apply relative bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden;
+  }
+
+  .card-wrapper::before {
+    background: conic-gradient(
+      rgba(245, 236, 39, 0.8) 0deg,
+      rgba(39, 245, 228, 0.8) 0deg,
+      transparent 80deg
+    );
+
+    @apply h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] absolute animate-border-spin;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 44.6%;
+    margin-left: 9.8%;
+    z-index: -1;
+    animation: moveline 8s linear forwards;
+  }
+
+  @keyframes moveline {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  .timeline::after {
+    top: 2%;
+    left: 0;
+  }
+
+  .left-container {
+    left: 5.25%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .left-container {
+    right: -36%;
+  }
+}
+
+@media only screen and (min-width: 741px) {
+  .left-container {
+    right: -22.75%;
+  }
+}
+
+@media only screen and (min-width: 844px) {
+  .left-container {
+    right: -21.5%;
+  }
+}
+
+@media only screen and (min-width: 896px) {
+  .left-container {
+    right: -20.5%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .left-container {
+    right: -29.5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .left-container {
+    left: 85.75%;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .left-container {
+    left: 100.5%;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .left-container {
+    left: 81.75%;
   }
 }

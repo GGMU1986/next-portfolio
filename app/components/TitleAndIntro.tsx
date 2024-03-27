@@ -1,5 +1,5 @@
 import React from 'react';
-import SentenceAnimation from './sentenceAnimation';
+import SentenceAnimation from './SentenceAnimation';
 import TypeEffect from './TypeEffect';
 
 const TitleAndIntro = () => {

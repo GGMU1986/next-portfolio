@@ -78,8 +78,8 @@ export const TIMELINEMODAL = [
       'At Aspen Capital, I assisted to build, and currently help maintain/write tests for, a user-facing app, an internal app, and the automated phone system. Additonally, I make improvements, and take part in a rotational on call for our microservices that maintain the nightly statement process, which assesses each loan for late fees and/or the creation of the monthly statements',
       'The user-facing app, or Borrower Portal (BP), for Gregory Funding, which is the mortgage servicing arm of Aspen Capital, allows borrowers to make payments, set up autopay, upload/download documents, view loan information/payment history, and update personal information, all while receiving email notifications. As of March 2024, the BP has 19,000+ active users, and averages 11,000+ payments for $20M+ in payment revenue per month',
       'The internal app is the Aspen Suite (AS), or the Admin Portal. Business analysts, product managers, developers, and other internal stakeholders can use the app to view relevant information about borrowers and loans. The app is the main resource for the Gregory Funding Call Center agents to assist, and perform actions on behalf of, the borrowers',
-      'Many borrowers prefer to make payments over the phone, not through the BP, resulting in call wait times of over an hour. I helped design, develop, and deploy an automated phone system using the Twilio API, where borrowers can use the Interactive Voice Response (IVR) system to make payments, save bank accounts for future use, and setup/update/delete autopay. This greatly decreased pressure on the call center, reducing call wait times by one hour. As of March 2024, Twilio payments average about 3,000+ per month resulting in $5M+ in revenue',
-      'I was the lead on the project to migrate the process for updating our on-prem & cloud databases with payment information, from Chase, to AWS. I replaced the previous process which consisted of stored long SQL procedures. I made use of S3 buckets, Lambdas, and SQS in AWS for the new process. Resulting in better logging, error handling, and process efficiency',
+      'Many borrowers prefer to make payments over the phone, not through the BP, resulting in call wait times of over an hour. I helped design, develop, and deploy an automated phone system using the Twilio API, where borrowers can use the Interactive Voice Response (IVR) system to make payments, save bank accounts for future use, and setup/update/delete autopay. This greatly decreased pressure on the call center, reducing call wait times by one hour. As of March 2024, phone system payments average about 3,000+ per month resulting in $5M+ in revenue',
+      'I was the lead on the project to migrate the process for updating our on-prem & cloud databases with payment information, from Chase, to AWS. I replaced the previous process which consisted of stored long SQL procedures. I made use of S3 buckets, Lambdas, and SQS in AWS for the new process, resulting in better logging, error handling, and process efficiency',
       'I collaborate daily with stakeholders/teams in various parts of the business to understand needs, and create realistic plans to complete goals. I also participate in software design/architecture discussions, review pull requests for my peers and provide feedback to improve code quality',
     ],
     pics: [
@@ -97,7 +97,7 @@ export const TIMELINEMODAL = [
         alt: 'paperless-campaign',
         tab: 'Paperless Campaign Modal',
         description:
-          'If a borrower had not enabled paperless upon registration then a modal would appear for the first few times after they logged in promtping them to opt for paperless. Paperless conversion went from 20% to 49%',
+          'If a borrower had not enabled paperless upon registration then a modal would appear for the first few times after they logged in prompting them to opt for paperless. Paperless conversion went from 20% to 49%',
       },
       {
         id: 2,
@@ -268,7 +268,7 @@ export const TIMELINEMODAL = [
     place: 'New York, N.Y.',
     date: 'January 2018 - April 2018',
     bullets: [
-      'I had the great opportunity of interning at a Big 4 Accounting Firm during their busy season. I was part of the team in the Alternative Investments division of PwC that was auditing the Financial Statements of a Hedge Fund in NYC. ',
+      'I interned at a Big 4 Accounting Firm during their busy season. I was part of a team in the Alternative Investments division of PwC that audited the Financial Statements of a Hedge Fund',
     ],
   },
   {

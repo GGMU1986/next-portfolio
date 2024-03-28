@@ -78,7 +78,7 @@ export const PICS = [
     text: '',
   },
   {
-    path: '/travel/dublin.jpg',
+    path: '/travel/dublin.JPG',
     title: 'Dublin, Ireland',
     time: 'Feb 2019',
     text: '',

@@ -48,22 +48,22 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
                   <div className='flex justify-center items-center text-center text-lg text-white px-20'>
                     {pic.description}
                   </div>
-                  <IoIosArrowDropleftCircle
-                    className='text-[30px] text-white absolute -left-[5%] cursor-pointer'
-                    onClick={() =>
-                      setCurrent(current === 0 ? length - 1 : current - 1)
-                    }
-                  />
-                  <IoIosArrowDroprightCircle
-                    className='text-[30px] text-white absolute -right-[5%] cursor-pointer'
-                    onClick={() =>
-                      setCurrent(current === length - 1 ? 0 : current + 1)
-                    }
-                  />
                 </div>
               ) : (
                 <></>
               )}
+              <IoIosArrowDropleftCircle
+                className='text-[30px] text-white absolute -left-[5%] bottom-[50%] cursor-pointer'
+                onClick={() =>
+                  setCurrent(current === 0 ? length - 1 : current - 1)
+                }
+              />
+              <IoIosArrowDroprightCircle
+                className='text-[30px] text-white absolute -right-[5%] bottom-[50%] cursor-pointer'
+                onClick={() =>
+                  setCurrent(current === length - 1 ? 0 : current + 1)
+                }
+              />
               <div className='absolute -left-[1%] -bottom-[6%] text-white'>
                 {pic.id + 1}/{picsArray.length}
               </div>

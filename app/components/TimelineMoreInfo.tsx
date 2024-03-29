@@ -64,7 +64,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`z-[8] lg:max-w-[70%] w-fit p-8 rounded-lg ${
+      className={`z-[8] lg:w-[70%] w-fit p-8 rounded-lg ${
         data.type === 'school'
           ? 'bg-blue-500'
           : data.type === 'work'

@@ -30,7 +30,7 @@ const TitleAndIntro = () => {
           walks with my wife, reading, playing guitar, and looking for the best
           taco in America.
         </p>
-        <p>
+        <p className='mb-2 lg:mb-0'>
           I am based out of New York City and have a Master&apos;s in
           Mathematics.
         </p>

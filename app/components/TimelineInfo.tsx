@@ -45,7 +45,7 @@ const TimelineInfo: React.FC<TimelineInfoProps> = ({
       <img
         src={src}
         alt={alt}
-        className={`hover:animate-spin w-[50px] h-[50px] rounded-xl z-[10] absolute top-[27%] sm:top-[37%] cursor-pointer ${
+        className={`w-[50px] h-[50px] rounded-xl z-[10] absolute top-[27%] sm:top-[37%] cursor-pointer ${
           id % 2 === 0
             ? 'left-[5.25%] sm:-left-[9.5%] md:-left-[22%] lg:-left-[20.75%] xl:-left-[19.5%] 2xl:-left-[26.25%]'
             : 'left-container'

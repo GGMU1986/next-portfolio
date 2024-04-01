@@ -83,7 +83,7 @@ const TimelineMoreInfo: React.FC<TimelineMoreInfoProps> = ({
           )}
         </div>
         <GrClose
-          className='relative text-2xl cursor-pointer text-white z-[11]'
+          className='relative text-2xl cursor-pointer text-white z-[11] transform transition duration-300 hover:-rotate-90'
           onClick={() => setShowModal(false)}
         />
       </div>

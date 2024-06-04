@@ -27,19 +27,21 @@ const MobileNav = () => {
           className='absolute top-4 right-4 cursor-pointer'
           onClick={() => setMobileSlider(false)}
         />
-        {NAV_LINKS.map((nav, i) => {
-          return (
-            <Link key={i} href={nav.path}>
-              <div className='flex flex-col items-center justify-center text-3xl'>
-                <p
-                  onClick={() => setMobileSlider(false)}
-                  className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-cyan-500 lg:mt-10 mt-4'
-                >
-                  {nav.text}
-                </p>
-              </div>
-            </Link>
-          );
+        {NAV_LINKS.map((nav) => {
+          if (nav.id !== 5) {
+            return (
+              <Link key={nav.id} href={nav.path}>
+                <div className='flex flex-col items-center justify-center text-3xl'>
+                  <p
+                    onClick={() => setMobileSlider(false)}
+                    className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-cyan-500 lg:mt-10 mt-4'
+                  >
+                    {nav.text}
+                  </p>
+                </div>
+              </Link>
+            );
+          }
         })}
       </div>
     </>

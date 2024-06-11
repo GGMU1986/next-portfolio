@@ -25,7 +25,9 @@ const Navbar = () => {
   return (
     <motion.div
       className={`sticky top-0 z-[11] w-screen h-[3.05rem] md:h-[4.5rem] lg:h-[6.1rem] flex justify-between items-center px-6 sm:px-20 ${
-        scrollPosition > 10 ? 'bg-slate-600 shadow' : 'bg-transparent'
+        scrollPosition > 10
+          ? 'bg-gradient-to-tr from-black to-blue-900'
+          : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}

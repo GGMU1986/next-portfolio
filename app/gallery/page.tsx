@@ -33,7 +33,7 @@ const Gallery = () => {
                     {pic.title} - {pic.time}
                   </p>
                   <div className='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30'>
-                    <div className='absolute inset-0 bg-gradient-to-b xl:group-hover:from-slate-600/70 xl:group-hover:via-slate-600/60 xl:group-hover:to-slate-600/70'></div>
+                    <div className='absolute inset-0 bg-gradient-to-b xl:group-hover:from-transparent xl:group-hover:via-transparent xl:group-hover:to-transparent'></div>
                     <img
                       src={pic.path}
                       alt={pic.title}
@@ -60,7 +60,7 @@ const Gallery = () => {
                   setCurrent(current === 0 ? length - 1 : current - 1)
                 }
                 className='
-                    absolute bottom-[40%] lg:bottom-[47%] left-[6%] lg:-left-[12%] text-[1.5rem] lg:text-[2.5rem] text-white/70 cursor-pointer select-none
+                    absolute bottom-[40%] lg:bottom-[47%] left-[6%] lg:-left-[12%] text-[1.5rem] lg:text-[2.5rem] text-white cursor-pointer select-none
                   '
               />
               <FaArrowCircleRight
@@ -68,7 +68,7 @@ const Gallery = () => {
                   setCurrent(current === length - 1 ? 0 : current + 1)
                 }
                 className='
-                    absolute bottom-[40%] lg:bottom-[47%] right-[6%] lg:left-[107%] text-[1.5rem] lg:text-[2.5rem] text-white/70 cursor-pointer select-none
+                    absolute bottom-[40%] lg:bottom-[47%] right-[6%] lg:left-[107%] text-[1.5rem] lg:text-[2.5rem] text-white cursor-pointer select-none
                   '
               />
             </div>

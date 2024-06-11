@@ -8,9 +8,9 @@ interface InstructionsTypes {
 const Instructions: React.FC<InstructionsTypes> = ({ className }) => {
   return (
     <div className={className}>
-      <button className='group relative border-2 text-white rounded px-3 py-1 text-2xl inline-block'>
+      <button className='group relative border-2 text-white rounded px-3 py-1 text-2xl inline-block shadow-glow'>
         Instructions
-        <div className='absolute top-full right-0 font-mono border-2 rounded-lg p-3 mt-1 scale-y-0 group-hover:scale-y-100 origin-top duration-200 w-[27rem]'>
+        <div className='absolute top-full right-0 font-mono border-2 rounded-lg p-3 mt-1 scale-y-0 group-hover:scale-y-100 origin-top duration-200 w-[27rem] bg-black text-amber-300'>
           Key down on A, S, D, F, J, K, L, and Semicolon (;) on your keyboard to
           make sounds from a drum set. <br />
           <br /> You can also add the percussion to one of the drumless tracks.

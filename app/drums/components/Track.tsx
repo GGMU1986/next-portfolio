@@ -12,14 +12,14 @@ interface TrackTypes {
 
 const Track: React.FC<TrackTypes> = ({ id, src, title }) => {
   const [playPause, setPlayPause] = useState<boolean>(false);
-  let audio: HTMLAudioElement | null;
+  let track!: HTMLAudioElement | null;
   useEffect(() => {
-    audio = document.querySelector(`#${id}`);
+    track = document.querySelector(`#${id}`);
   });
 
   return (
     <div className='flex justify-between'>
-      <audio loop id={id} src={src}></audio>
+      <audio loop id={id} src={src} className='track'></audio>
       <h3
         className={`text-2xl font-semibold text-center flex gap-2 ${
           playPause ? 'text-amber-300 italic' : ''
@@ -33,17 +33,17 @@ const Track: React.FC<TrackTypes> = ({ id, src, title }) => {
           icon={playPause ? <FaPause /> : <FaPlay />}
           onClick={() => {
             setPlayPause(!playPause);
-            if (audio) {
-              playPause ? audio.pause() : audio.play();
+            if (track) {
+              playPause ? track.pause() : track.play();
             }
           }}
         />
         <TrackButtons
           icon={<FaStop />}
           onClick={() => {
-            if (audio) {
-              audio.pause();
-              audio.currentTime = 0;
+            if (track) {
+              track.pause();
+              track.currentTime = 0;
               setPlayPause(false);
             }
           }}

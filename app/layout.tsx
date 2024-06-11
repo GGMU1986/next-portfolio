@@ -18,7 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='bg-slate-600'>
+    <html
+      lang='en'
+      className="bg-[url('/images/bricks.jpeg')] bg-no-repeat bg-cover"
+    >
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Navbar />
         {children}

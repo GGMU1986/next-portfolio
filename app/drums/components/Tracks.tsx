@@ -8,7 +8,7 @@ const Tracks = () => {
       <h1 className='text-3xl font-bold'>Drumless Tracks</h1>
       <div className='mt-4 flex flex-col gap-2'>
         {TRACKS.map((el) => {
-          return <Track id={el.id} src={el.src} title={el.title} />;
+          return <Track key={el.id} id={el.id} src={el.src} title={el.title} />;
         })}
       </div>
     </div>

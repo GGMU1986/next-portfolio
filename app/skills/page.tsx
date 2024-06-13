@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import { SKILLS1, SKILLS2 } from '../../constants/skills';
+// import { SKILLS1, SKILLS2 } from '../../constants/skills';
 import Headline from '../components/Headline';
 import { Skill } from '../types';
 
@@ -27,11 +27,11 @@ const Skills = () => {
         modules={[Autoplay]}
         className='max-w-[80%]'
       >
-        {SKILLS1.map((skill: Skill, index: number) => (
+        {/* {SKILLS1.map((skill: Skill, index: number) => (
           <SwiperSlide key={index}>
             <img src={skill.image} alt={skill.alt} />
           </SwiperSlide>
-        ))}
+        ))} */}
       </Swiper>
       <Swiper
         slidesPerView={8}
@@ -45,11 +45,11 @@ const Skills = () => {
         modules={[Autoplay]}
         className='max-w-[80%]'
       >
-        {SKILLS2.map((skill: Skill, index: number) => (
+        {/* {SKILLS2.map((skill: Skill, index: number) => (
           <SwiperSlide key={index}>
             <img src={skill.image} alt={skill.alt} />
           </SwiperSlide>
-        ))}
+        ))} */}
       </Swiper>
     </div>
   );

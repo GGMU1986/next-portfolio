@@ -1,5 +1,7 @@
 import React from 'react'
 import Headline from '../components/Headline';
+import { SKILLS } from '@/constants/skills';
+import Category from './components/Category';
 
 const Skills = () => {
   return (
@@ -9,11 +11,16 @@ const Skills = () => {
         <p className='font-bold text-white'>&amp;</p>
         <Headline headline='Technologies' />
       </div>
-      <div>
-        <img src="/skills/newHTML.png" alt="newHTML" />
-        <img src="/skills/newCSS.png" alt="newHTML" />
-        <img src="/skills/newJS.png" alt="newHTML" />
-        <img src="/skills/newNext.png" alt="newHTML" />
+      <div className='w-1/2 text-white font-bold font-mono text-3xl p-4 flex flex-col gap-6'>
+        {SKILLS.map(skill => {
+          return (
+            <div key={skill.title}>
+              <Category 
+                title={skill.title}
+                images={skill.images}
+              />
+            </div>
+        )})}
       </div>
     </div>
   )

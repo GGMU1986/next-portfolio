@@ -1,105 +1,147 @@
-export const SKILLS1 = [
+export const SKILLS = [
   {
-    image: '/skills/aws.png',
-    alt: 'aws',
+    title: 'Frontend',
+    images: [
+      {
+        src: '/skills/html.png',
+        className: '',
+        title: 'HTML'
+      },
+      {
+        src: '/skills/css.png',
+        className: '',
+        title: 'CSS'
+      },
+      {
+        src: '/skills/js.png',
+        className: 'rounded-full',
+        title: 'JavaScript'
+      },
+      {
+        src: '/skills/ts.png',
+        className: 'rounded-full',
+        title: 'TypeScript'
+      },
+      {
+        src: '/skills/react.png',
+        className: 'rounded-full',
+        title: 'React.js'
+      },
+      {
+        src: '/skills/next.png',
+        className: 'rounded-full',
+        title: 'Next.js'
+      },
+      {
+        src: '/skills/tailwind.png',
+        className: 'rounded-full',
+        title: 'Tailwind CSS'
+      },
+      {
+        src: '/skills/framer.webp',
+        className: 'bg-white rounded-full',
+        title: 'Framer Motion'
+      },
+    ]
   },
   {
-    image: '/skills/css3.png',
-    alt: 'css',
+    title: 'Backend',
+    images: [
+      {
+        src: '/skills/sql.png',
+        className: 'bg-white rounded-full',
+        title: 'SQL'
+      },
+      {
+        src: '/skills/java.webp',
+        className: 'rounded-full',
+        title: 'Java'
+      },
+      {
+        src: '/skills/spring.png',
+        className: 'rounded-full',
+        title: 'Spring'
+      },
+      {
+        src: '/skills/node.png',
+        className: 'rounded-full',
+        title: 'Node.js'
+      },
+      {
+        src: '/skills/ts.png',
+        className: 'rounded-full',
+        title: 'TypeScript'
+      },
+      {
+        src: '/skills/rails.webp',
+        className: 'rounded-full',
+        title: 'Ruby on Rails'
+      }
+    ]
   },
   {
-    image: '/skills/graphql.png',
-    alt: 'graphql',
+    title: 'Databases',
+    images: [
+      {
+        src: '/skills/psql.png',
+        className: 'bg-white rounded-full',
+        title: 'PostgreSQL'
+      },
+      {
+        src: '/skills/mongo.png',
+        className: 'bg-white rounded-full',
+        title: 'Mongo DB'
+      }
+    ]
   },
   {
-    image: '/skills/html5.png',
-    alt: 'html',
+    title: 'DevOps / Cloud',
+    images: [
+      {
+        src: '/skills/git.png',
+        className: 'bg-white rounded-full',
+        title: 'Git'
+      },
+      {
+        src: '/skills/docker.png',
+        className: 'bg-white rounded-full',
+        title: 'Docker'
+      },
+      {
+        src: '/skills/kubernetes.png',
+        className: 'rounded-full',
+        title: 'Kubernetes'
+      },
+      {
+        src: '/skills/pulumi.png',
+        className: 'rounded-full',
+        title: 'Pulumi'
+      },
+      {
+        src: '/skills/aws.png',
+        className: 'rounded-full',
+        title: 'Amazon Web Services'
+      }
+    ]
   },
   {
-    image: '/skills/tailwind.png',
-    alt: 'intercom',
+    title: 'External APIs',
+    images: [
+      {
+        src: '/skills/plaid.jpeg',
+        className: 'bg-white rounded-full',
+        title: 'Plaid'
+      },
+      {
+        src: '/skills/intercom.png',
+        className: 'bg-white rounded-full',
+        title: 'Intercom'
+      },
+      {
+        src: '/skills/twilio.png',
+        className: 'bg-white rounded-full',
+        title: 'Twilio'
+      }
+    ]
   },
-  {
-    image: '/skills/java.png',
-    alt: 'java',
-  },
-  {
-    image: '/skills/JS.png',
-    alt: 'JS',
-  },
-  {
-    image: '/skills/mongo.png',
-    alt: 'mongo',
-  },
-  {
-    image: '/skills/plaid.png',
-    alt: 'plaid',
-  },
-  {
-    image: '/skills/express.png',
-    alt: 'express',
-  },
-  {
-    image: '/skills/next.png',
-    alt: 'next',
-  },
-  {
-    image: '/skills/intercom.png',
-    alt: 'intercom',
-  },
-  {
-    image: '/skills/git.png',
-    alt: 'intercom',
-  },
-];
-
-export const SKILLS2 = [
-  {
-    image: '/skills/webpack.png',
-    alt: 'webpack',
-  },
-  {
-    image: '/skills/node.png',
-    alt: 'node',
-  },
-  {
-    image: '/skills/postgreSQL.png',
-    alt: 'postgres',
-  },
-  {
-    image: '/skills/prisma.png',
-    alt: 'prisma',
-  },
-  {
-    image: '/skills/TS.png',
-    alt: 'TS',
-  },
-  {
-    image: '/skills/rails.png',
-    alt: 'rails',
-  },
-  {
-    image: '/skills/react.png',
-    alt: 'react',
-  },
-  {
-    image: '/skills/redux.png',
-    alt: 'redux',
-  },
-  {
-    image: '/skills/ruby.png',
-    alt: 'ruby',
-  },
-  {
-    image: '/skills/framer.png',
-    alt: 'framer',
-  },
-  {
-    image: '/skills/twilio.png',
-    alt: 'twilio',
-  },
-  {
-    image: '/skills/pulumi.webp',
-    alt: 'pulumi',
-  },
-];
+]

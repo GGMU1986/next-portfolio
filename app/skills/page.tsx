@@ -1,12 +1,8 @@
-'use client';
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-
-// import { SKILLS1, SKILLS2 } from '../../constants/skills';
+import React from 'react'
 import Headline from '../components/Headline';
-import { Skill } from '../types';
+import { SKILLS } from '@/constants/skills';
+import Category from './components/Category';
+import MobileSkills from './components/MobileSkills';
 
 const Skills = () => {
   return (
@@ -16,43 +12,20 @@ const Skills = () => {
         <p className='font-bold text-white'>&amp;</p>
         <Headline headline='Technologies' />
       </div>
-      <Swiper
-        slidesPerView={8}
-        loop={true}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
-        speed={3000}
-        modules={[Autoplay]}
-        className='max-w-[80%]'
-      >
-        {/* {SKILLS1.map((skill: Skill, index: number) => (
-          <SwiperSlide key={index}>
-            <img src={skill.image} alt={skill.alt} />
-          </SwiperSlide>
-        ))} */}
-      </Swiper>
-      <Swiper
-        slidesPerView={8}
-        loop={true}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-          reverseDirection: true,
-        }}
-        speed={3000}
-        modules={[Autoplay]}
-        className='max-w-[80%]'
-      >
-        {/* {SKILLS2.map((skill: Skill, index: number) => (
-          <SwiperSlide key={index}>
-            <img src={skill.image} alt={skill.alt} />
-          </SwiperSlide>
-        ))} */}
-      </Swiper>
+      <MobileSkills />
+      <div className='hidden md:block xl:w-1/2 md:text-white md:font-bold md:font-mono md:text-2xl lg:text-3xl md:p-4 md:flex md:flex-col md:gap-6'>
+        {SKILLS.map(skill => {
+          return (
+            <div key={skill.title}>
+              <Category 
+                title={skill.title}
+                images={skill.images}
+              />
+            </div>
+        )})}
+      </div>
     </div>
-  );
-};
+  )
+}
 
 export default Skills;

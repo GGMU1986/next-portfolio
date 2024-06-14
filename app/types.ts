@@ -37,6 +37,5 @@ export type SelfImage = {
 
 export type SkillImage = {
   src: string;
-  className: string;
   title: string;
 }

@@ -14,7 +14,7 @@ const Category: React.FC<CategoryTypes> = ({title, images}) => {
         {images.map((img: SkillImage) => {
           return (
             <div key={img.title} className='group hover:translate-y-3 transition-all duration-500 flex flex-col items-center'>
-              <img className={`cursor-pointer w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] ${img.className}`} src={img.src} alt={img.title}/>
+              <img className='cursor-pointer rounded-full w-[50px] h-[50px] lg:w-[80px] lg:h-[80px]' src={img.src} alt={img.title}/>
               <span className='absolute opacity-0 group-hover:bg-blue-900 p-2 text-sm rounded-lg text-center group-hover:text-white group-hover:opacity-100 group-hover:-translate-y-8 duration-700'>
                 {img.title}
               </span>

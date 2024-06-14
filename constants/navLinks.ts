@@ -19,7 +19,7 @@ export const NAV_LINKS = [
   },
   {
     id: 3,
-    path: '/my-skills',
+    path: '/skills',
     icon: BsTools,
     text: 'Skills',
   },

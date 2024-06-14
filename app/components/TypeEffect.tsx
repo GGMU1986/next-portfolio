@@ -9,11 +9,9 @@ const TypeEffect = () => {
         1500,
         'Problem Solver',
         1500,
-        'Compassionate Teammate',
+        'Innately Curious',
         1500,
-        'Thoughtful Communicator',
-        1500,
-        'Lifelong Learner',
+        'Collaborative',
         1500,
       ]}
       speed={50}

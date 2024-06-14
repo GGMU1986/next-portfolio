@@ -1,17 +1,5 @@
 export const PICS = [
   {
-    path: '/travel/amsterdam.JPG',
-    title: 'Amsterdam, Netherlands',
-    time: 'October 2019',
-    text: '',
-  },
-  {
-    path: '/travel/austin.png',
-    title: 'University of Texas at Austin',
-    time: 'November 2021',
-    text: '',
-  },
-  {
     path: '/travel/berlin.JPG',
     title: 'Berlin, Germany',
     time: 'October 2019',
@@ -22,12 +10,6 @@ export const PICS = [
     title: 'Killarney National Park, Ireland',
     time: 'February 2019',
     text: '',
-  },
-  {
-    path: '/travel/burger.JPG',
-    title: 'Skopje, Macedonia',
-    time: 'October 2019',
-    text: 'Not a taco, but a delicious burger nonetheless',
   },
   {
     path: '/travel/cliffs.JPG',
@@ -75,12 +57,6 @@ export const PICS = [
     path: '/travel/lake.jpg',
     title: 'Just outside of Ioannina, Greece',
     time: 'June 2022',
-    text: '',
-  },
-  {
-    path: '/travel/dublin.JPG',
-    title: 'Dublin, Ireland',
-    time: 'Feb 2019',
     text: '',
   },
   {

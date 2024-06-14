@@ -32,11 +32,11 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
             >
               {pic.id === current ? (
                 <div className='flex flex-col justify-center items-center relative'>
-                  <div className='text-white text-2xl font-semibold text-center'>
+                  <h2 className='text-white text-2xl font-semibold text-center'>
                     {pic.id > 9
                       ? `Aspen Suite - ${pic.tab}`
                       : `Borrower Portal - ${pic.tab}`}
-                  </div>
+                  </h2>
                   <img
                     onClick={() =>
                       setCurrent(current === length - 1 ? 0 : current + 1)
@@ -45,9 +45,9 @@ const ResumePictures: React.FC<ResumePicturesProps> = ({
                     alt={pic.alt}
                     className='object-scale-down w-[400px] h-[200px] sm:w-[900px] sm:h-[600px] my-4 cursor-pointer relative'
                   />
-                  <div className='flex justify-center items-center text-center text-lg text-white px-20'>
+                  <p className='flex justify-center items-center text-center text-lg text-white px-20'>
                     {pic.description}
-                  </div>
+                  </p>
                 </div>
               ) : (
                 <></>

@@ -53,7 +53,7 @@ const Navbar = () => {
         <LinkText
           href='/navbar/George_Tsimis_Resume.pdf'
           text='RESUME'
-          className='font-semibold text-[0.74rem] md:text-[1rem] lg:text-[1.25rem] font-white tracking-[2px] hover:text-amber-300 small-screen'
+          className='small-screen'
           target='_blank'
         />
         <LinkImg

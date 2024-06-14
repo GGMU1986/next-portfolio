@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 interface LinkImgProps {
   href: string;
@@ -20,13 +19,10 @@ const LinkImg: React.FC<LinkImgProps> = ({
 }) => {
   return (
     <Link href={href} target={target}>
-      <motion.img
-        initial={{ rotate: 0 }}
-        whileHover={{ rotate: 360, scale: 1.1 }}
-        transition={{ duration: 0.5 }}
+      <img
         src={src}
         alt={alt}
-        className={className}
+        className={`transition duration-700 hover:rotate-[360deg] hover:scale-110 ${className}`}
       />
     </Link>
   );

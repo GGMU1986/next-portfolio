@@ -74,9 +74,9 @@ const TimelineInfo: React.FC<TimelineInfoProps> = ({
             <FaCode className='' />
           )}
         </div>
-        <div className='text-sm lg:text-[1.3rem] font-bold mt-6'>{title}</div>
-        <div className='text-sm lg:text-lg font-semibold'>{place}</div>
-        <div className='text-sm lg:text-lg font-semibold'>{date}</div>
+        <p className='text-sm lg:text-[1.3rem] font-bold mt-6'>{title}</p>
+        <p className='text-sm lg:text-lg font-semibold'>{place}</p>
+        <p className='text-sm lg:text-lg font-semibold'>{date}</p>
       </motion.div>
     </div>
   );

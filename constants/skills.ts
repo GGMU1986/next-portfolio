@@ -56,7 +56,7 @@ export const SKILLS = [
         title: 'Node.js'
       },
       {
-        src: '/skills/ts.png',
+        src: '/skills/TS.png',
         title: 'TypeScript'
       },
       {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { easeIn, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { FaCode } from 'react-icons/fa6';
 import { IoSchoolSharp } from 'react-icons/io5';

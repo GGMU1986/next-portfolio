@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className="bg-[url('/images/bricks.jpeg')] bg-no-repeat bg-cover"
+      className="bg-black bg-[url('/images/bricks.jpeg')] bg-no-repeat bg-cover"
     >
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Navbar />

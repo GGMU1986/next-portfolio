@@ -15,6 +15,7 @@ const MobileSkills = () => {
           return (
             <div key={skill.title} className='text-white text-2xl font-semibold'>
               <Category 
+                id={skill.id}
                 title={skill.title}
                 images={skill.images}
               />

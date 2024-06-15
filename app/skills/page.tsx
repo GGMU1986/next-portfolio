@@ -17,7 +17,8 @@ const Skills = () => {
         {SKILLS.map(skill => {
           return (
             <div key={skill.title}>
-              <Category 
+              <Category
+                id={skill.id} 
                 title={skill.title}
                 images={skill.images}
               />

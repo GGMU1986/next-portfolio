@@ -18,6 +18,7 @@ const MobileSkills = () => {
                 id={skill.id}
                 title={skill.title}
                 images={skill.images}
+                isMobile={true}
               />
             </div>
           )

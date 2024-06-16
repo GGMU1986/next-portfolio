@@ -7,15 +7,16 @@ interface CategoryTypes {
   id: number,
   title: string;
   images: SkillImage[];
+  isMobile?: boolean;
 }
 
-const Category: React.FC<CategoryTypes> = ({id, title, images}) => {
+const Category: React.FC<CategoryTypes> = ({ id, title, images, isMobile }) => {
   return (
     <div className='flex flex-col md:flex-row justify-between items-center'>
       <motion.h1 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: id + 0.5, ease: 'easeIn' }}
+        transition={{ duration: isMobile ? 1 : 1.5, delay: isMobile ? 0.1 : id + 0.5, ease: 'easeIn' }}
         className='m-0 md:mr-2'
       >
         {title}
@@ -27,7 +28,7 @@ const Category: React.FC<CategoryTypes> = ({id, title, images}) => {
               <motion.img
                 initial={{ x: 1800 }}
                 animate={{ x: 0, rotate: -1080 }}
-                transition={{ duration: 2, delay: id + 0.5, ease: 'easeIn' }} 
+                transition={{ duration: isMobile ? 1 : 2, delay: isMobile ? 0.25 : id + 0.5, ease: 'easeIn' }} 
                 className='cursor-pointer rounded-full w-[50px] h-[50px] lg:w-[80px] lg:h-[80px]' 
                 src={img.src} 
                 alt={img.title}

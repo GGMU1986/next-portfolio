@@ -11,20 +11,15 @@ const TitleAndIntro = () => {
       />
       <TypeEffect />
       <div className='text-white lg:max-w-[30rem] xl:max-w-[40rem] text-xs sm:text-xl sm:pt-5 sm:font-semibold flex flex-col gap-6'>
+        <p>Thank you for visiting my site! I built this site with Next.js, TypeScript, Tailwind CSS, and Framer Motion.</p>
         <p>
-          I have over two years of experience working as a Full Stack Software
-          Engineer on a team developing web applications with JavaScript,
-          TypeScript, Node, React, Next, Java, Spring Boot, Tailwind, Mantine,
-          AWS, Jest, React Testing Library, PostgreSQL, Ruby on Rails, Redux,
-          and GraphQL.
+          I have 2.5 years of professional experience working as a Full Stack Software
+          Engineer. I specialize in building apps with Java, Spring, Node.js, JavaScript, TypeScript, 
+          React.js, Next.js, Tailwind CSS, Jest, React Testing Library, SQL, PostgreSQL, Mongo DB and AWS.
+          I have experience with Ruby on Rails, Redux, and GraphQL as well.
         </p>
         <p>
-          Coding is incredibly rewarding and fun! It allows me to express myself
-          analytically and creatively while solving real world problems and
-          building intuitive, aesthetically pleasing apps.
-        </p>
-        <p>
-          When I am not coding, I enjoy watching sports, especially European
+          When I&apos;m not coding, I enjoy watching sports, especially European
           Football. I am a supporter of Manchester United Football Club. I also
           enjoy traveling, learning about different cultures, taking evening
           walks with my wife, reading, playing guitar, and looking for the best

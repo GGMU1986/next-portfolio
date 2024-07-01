@@ -13,7 +13,7 @@ const Footer = () => {
   const email = {
     icon: MdEmail,
     alt: 'Email',
-    text: 'gt2186@gmail.com',
+    text: 'georgetsimis21@gmail.com',
   };
 
   const location = {

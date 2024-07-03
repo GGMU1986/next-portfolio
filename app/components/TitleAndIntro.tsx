@@ -5,30 +5,22 @@ import TypeEffect from './TypeEffect';
 const TitleAndIntro = () => {
   return (
     <div className='flex flex-col text-[24px] md:text-[40px] sm:max-w-[750px]'>
+      <h2 className='text-[3rem] lg:text-[6rem] animate-welcome text-white font-welcome tracking-widest'>
+        Welcome
+      </h2>
       <SentenceAnimation
         phrase='George&nbsp;Tsimis'
         className='text-white font-semibold cursor-pointer tracking-wider'
       />
       <TypeEffect />
-      <div className='text-white lg:max-w-[30rem] xl:max-w-[40rem] text-xs sm:text-xl sm:pt-5 sm:font-semibold flex flex-col gap-6'>
-        <p>Thank you for visiting my site! I built this site with Next.js, TypeScript, Tailwind CSS, and Framer Motion.</p>
+      <div className='text-white lg:max-w-[30rem] xl:max-w-[40rem] text-[1rem] sm:text-xl sm:pt-5 sm:font-semibold flex flex-col gap-6 mb-6'>
         <p>
-          I have 2.5 years of professional experience working as a Full Stack Software
-          Engineer. I specialize in building apps with Java, Spring, Node.js, JavaScript, TypeScript, 
-          React.js, Next.js, Tailwind CSS, Jest, React Testing Library, SQL, PostgreSQL, Mongo DB and AWS.
-          I have experience with Ruby on Rails, Redux, and GraphQL as well.
+          I&apos;m an experienced Full Stack Software Engineer with a Master&apos;s in Mathematics who has led projects leveraging 
+          Java, Spring Framework, Node.js, JavaScript, TypeScript, React.js, Next.js, and Tailwind CSS, 
+          while collaborating with various internal teams/stakeholders, to build scalable and secure applications 
+          that focus on providing an intuitive and pleasant user experience.
         </p>
-        <p>
-          When I&apos;m not coding, I enjoy watching sports, especially European
-          Football. I am a supporter of Manchester United Football Club. I also
-          enjoy traveling, learning about different cultures, taking evening
-          walks with my wife, reading, playing guitar, and looking for the best
-          taco in America.
-        </p>
-        <p className='mb-2 lg:mb-0'>
-          I am based out of New York City and have a Master&apos;s in
-          Mathematics.
-        </p>
+        <p>I built this site using Next.js, TypeScript, Tailwind CSS, and Framer Motion</p>
       </div>
     </div>
   );

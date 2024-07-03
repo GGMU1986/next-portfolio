@@ -33,13 +33,12 @@ const Gallery = () => {
                     {pic.title} - {pic.time}
                   </p>
                   <div className='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30'>
-                    <div className='absolute inset-0 bg-gradient-to-b xl:group-hover:from-transparent xl:group-hover:via-transparent xl:group-hover:to-transparent'></div>
                     <img
                       src={pic.path}
                       alt={pic.title}
                       className='object-scale-down w-[400px] h-[200px] lg:w-[600px] lg:h-[400px] xl:w-[800px] xl:h-[600px]'
                     />
-                    <div className='absolute hidden xl:block inset-0 flex text-amber-300 translate-y-[100%] gap-6 flex-col items-center justify-center text-center transition-all duration-500 group-hover:translate-y-56'>
+                    <div className='absolute hidden xl:block inset-0 flex text-amber-300 translate-y-[100%] gap-6 flex-col items-center justify-center text-center transition-all duration-500 group-hover:translate-y-[22rem]'>
                       <p className='xl:text-3xl font-bold mb-16 sm:mb-0'>
                         {pic.title}
                       </p>
